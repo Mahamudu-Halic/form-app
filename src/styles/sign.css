@@ -1,0 +1,120 @@
+.sign{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+    /* border: solid 1px white; */
+    padding: 10px;
+    /* background-color: white; */
+    border-radius: 10px;
+    letter-spacing: 2px;
+}
+
+form{
+    /* border: solid 1px #ccc; */
+    border-radius: 10px;
+    /* padding: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+h1{
+    font-size: 22px;
+    text-align: center;
+}
+
+h2{
+    font-size: 18px;
+}
+
+h1, h2{
+    text-transform: capitalize;
+    color: #a3a2a2;
+}
+
+.form-group{
+    width: 100%;
+}
+
+input{
+    width: 100%;
+    border: solid 2px #b6b4b4;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+label{
+    display: block;
+    height: 25px;
+    color: #a3a2a2;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+label:last-child{
+    font-size: 14px;
+}
+
+button{
+    padding: 10px 20px;
+    border: solid 1px #cfc7c7;
+    border-radius: 5px;
+    color: #766e6e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+    display: block;
+}
+
+button:hover{
+    filter: brightness(120%);
+}
+
+.google{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.or{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: #a8a4a4;
+}
+
+.or::before{
+    content: "";
+    width: 45%;
+    height: 1px;
+    background-color: #cfcfcf;
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+}
+.or::after{
+    content: "";
+    width: 45%;
+    height: 1px;
+    background-color: #cfcfcf;
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+}
