@@ -1,8 +1,10 @@
 import "../styles/sign.css"
+import Theme from "./theme";
 
 const Sign = ({children}) => {
     return ( 
         <div className="sign">
+            <Theme />
             <div className="hero">
                 <h1>welcome to LearnHub</h1>
                 <div className="google">

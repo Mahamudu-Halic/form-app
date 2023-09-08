@@ -8,6 +8,12 @@
     gap: 20px;
 }
 
+.sign .theme{
+    position: absolute;
+    top: 10px;
+    right: 10px
+}
+
 .hero{
     display: flex;
     flex-direction: column;
@@ -42,7 +48,6 @@ h2{
 
 h1, h2{
     text-transform: capitalize;
-    color: #a3a2a2;
 }
 
 .form-group{
@@ -59,13 +64,12 @@ input{
 label{
     display: block;
     height: 25px;
-    color: #a3a2a2;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 label:last-child{
-    font-size: 14px;
+    font-size: 13px;
 }
 
 button{
@@ -97,7 +101,6 @@ button:hover{
     display: flex;
     justify-content: center;
     position: relative;
-    color: #a8a4a4;
 }
 
 .or::before{

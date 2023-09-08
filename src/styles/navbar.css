@@ -1,0 +1,19 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.logout{
+    background-color: #e0832ce8;
+    color: white;
+}

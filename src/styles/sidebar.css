@@ -1,0 +1,25 @@
+.sidebar{
+    width: 100px;
+    position: sticky;
+    height: 92vh;
+    top: 80px;
+    border: none;
+
+}
+
+.sidebar button{
+    background: none;
+    border: none;
+    padding: 30px 25px;
+    border-radius: 0;
+    color: #797474;
+}
+
+.sidebar button i{
+    font-size: 25px;
+}
+
+.sidebar button:hover{
+    background-color: #3b3939;
+    color: #fff;
+}

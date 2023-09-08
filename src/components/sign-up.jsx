@@ -1,9 +1,12 @@
 import Sign from "./sign";
+import Theme from "./theme";
 
 const SignUp = () => {
     return ( 
+        <>
+        {/* <Theme /> */}
         <Sign>
-             <form action="">
+            <form action="">
                 <h2>Get started</h2>
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
@@ -27,7 +30,8 @@ const SignUp = () => {
                 </div>
             </form>
         </Sign>
-     );
+        </>
+    );
 }
- 
+
 export default SignUp;

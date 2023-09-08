@@ -1,7 +1,10 @@
 import Sign from "./sign";
+import Theme from "./theme";
 
 const SignIn = () => {
     return ( 
+        <>
+        {/* <Theme /> */}
         <Sign>
             <form action="">
                 <h2>sign in</h2>
@@ -27,6 +30,7 @@ const SignIn = () => {
                 </div>
             </form>
         </Sign>
+        </>
      );
 }
  

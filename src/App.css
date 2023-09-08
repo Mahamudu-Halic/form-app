@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
-body{
-  background-color: #121212;
+.app{
+  min-height: 100vh;
+  /* background-color: #121212; */
+  /* color: white; */
+  /* padding: 20px; */
+}
+
+.hh{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.text{
+  flex: 1;
 }
