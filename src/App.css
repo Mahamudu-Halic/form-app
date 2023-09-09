@@ -14,6 +14,12 @@
   /* width: 100%; */
 }
 
+.routes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* -------------OVERVIEW------------- */
 .overview{
 }
@@ -143,6 +149,7 @@ h2{
   gap: 20px;
   width: 300px;
   cursor: pointer;
+  color: #fff;
 }
 
 .card i{

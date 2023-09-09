@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Chat from "./chat";
+import Contact from "./contact";
 import Courses from "./courses";
 import Navbar from "./navbar";
 import Overview from "./overview";
@@ -15,13 +16,20 @@ const HomePage = () => {
             <Navbar />
             <div className="align">
                 <SideBar />
-                <Routes>
-                    <Route path="/" element={<Overview />} />
-                    <Route path="/courses" element={<Courses/>} />
-                    <Route path="/upload" element={<Upload/>} />
-                    <Route path="/settings" element={<Settings/>} />
-                    <Route path="/chat" element={<Chat/>} />
-                </Routes>
+                <div className="routes">
+                    <Routes>
+                        <Route path="/" element={<Overview />} />
+                        <Route path="/courses" element={<Courses/>} />
+                        <Route path="/upload" element={<Upload/>} />
+                        <Route path="/settings" element={<Settings/>} />
+                        <Route path="/chat" element={<Chat/>} />
+                        <Route path="/contact" element={<Contact/>} />
+                    </Routes>
+
+                    <footer>
+                        footer goes here
+                    </footer>
+                </div>
             </div>
         </>
      );

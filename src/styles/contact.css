@@ -1,0 +1,32 @@
+.contact{
+    /* padding: 20px; */
+}
+
+
+.contact-us{
+    position: relative;
+    background: url("../images/contact-us.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 200px;
+}
+
+
+.contact-title{
+    z-index: 5;
+    color: #fff;
+}
+
+.contact-title p{
+    margin-top: 10px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 25px;
+    color: #ccc;
+}
