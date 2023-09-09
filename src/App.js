@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./components/home";
 const App = () => {
   const {theme, isLight} = useContext(Context)
-  const [isValid, setIsValid] = useState(true)
+  const [isValid, setIsValid] = useState(false)
 
   const ProtectedRoute = ({children}) => {
     if (!isValid){
