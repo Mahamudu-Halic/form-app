@@ -6,17 +6,10 @@
 
 .app{
   min-height: 100vh;
-  /* background-color: #121212; */
-  /* color: white; */
-  /* padding: 20px; */
 }
 
-.hh{
+.align{
   display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-
-.text{
-  flex: 1;
+  /* border: solid; */
+  /* width: 100%; */
 }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Sign from "./sign";
 import Theme from "./theme";
 
@@ -25,7 +26,7 @@ const SignIn = () => {
 
                 <div className="">
                     <label htmlFor="">
-                        Don&apos;t have an accout? Sign up
+                        Don&apos;t have an accout? <Link to="/sign-up">Sign Up</Link>
                     </label>
                 </div>
             </form>

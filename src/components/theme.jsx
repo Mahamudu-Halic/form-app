@@ -6,7 +6,6 @@ import { Context } from "./context.provider";
 const Theme = () => {
     const [isActive, setIsActive] = useState(false)
     const {isLight, changeTheme} = useContext(Context)
-    console.log(isLight)
 
     const handleClick = bool => {
         changeTheme(bool)

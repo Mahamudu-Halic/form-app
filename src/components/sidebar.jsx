@@ -1,22 +1,39 @@
 import "../styles/sidebar.css"
 import { useContext } from "react";
 import { Context } from "./context.provider";
+import { NavLink } from "react-router-dom";
 const SideBar = () => {
     const {isLight} = useContext(Context)
     return ( 
-        <div className="sidebar" style={isLight? {background: "#bbb"}: {background: "#2c2929"}}>
+        <div className="sidebar">
             <div className="items">
                 <div className="home">
-                    <button><i className="fa-solid fa-home"></i></button>
+                    <NavLink to="/">
+                        <button><i className="fa-solid fa-home"></i></button>
+                    </NavLink>
                 </div>
                 <div className="Courses">
-                <button><i className="fa-solid fa-book"></i></button>
+                    <NavLink to="/courses">
+                        <button><i className="fa-solid fa-book"></i></button>
+                    </NavLink>
                 </div>
                 <div className="Upload">
+                    <NavLink to="/upload">
+
                 <button><i className="fa-solid fa-upload"></i></button>
+                    </NavLink>
                 </div>
                 <div className="Settings">
+                    <NavLink to="settings">
+
                 <button><i className="fa-solid fa-gear"></i></button>
+                    </NavLink>
+                </div>
+                <div className="Chat">
+                    <NavLink to="chat">
+
+                <button><i className="fa-regular fa-message"></i></button>
+                    </NavLink>
                 </div>
             </div>
         </div>
