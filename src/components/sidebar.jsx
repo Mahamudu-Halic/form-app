@@ -31,8 +31,12 @@ const SideBar = () => {
                 </div>
                 <div className="Chat">
                     <NavLink to="chat">
-
-                <button><i className="fa-regular fa-message"></i></button>
+                        <button><i className="fa-regular fa-message"></i></button>
+                    </NavLink>
+                </div>
+                <div className="contact">
+                    <NavLink to="contact">
+                        <button><i className="fa-solid fa-headset"></i></button>
                     </NavLink>
                 </div>
             </div>
