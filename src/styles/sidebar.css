@@ -1,9 +1,8 @@
 .sidebar{
     width: 100px;
     position: sticky;
-    height: 92vh;
+    height: 80vh;
     top: 80px;
-    border-right: solid 1px gray;
 }
 
 .sidebar button{

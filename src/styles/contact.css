@@ -3,6 +3,7 @@
 }
 
 
+
 .contact-us{
     position: relative;
     background: url("../images/contact-us.jpg");
@@ -21,12 +22,18 @@
 .contact-title{
     z-index: 5;
     color: #fff;
+    
 }
+
+.contact-title h2{
+    font-size: 50px;
+}
+
 
 .contact-title p{
     margin-top: 10px;
     font-size: 15px;
     letter-spacing: 2px;
     line-height: 25px;
-    color: #ccc;
+    color: #ffffff96;
 }

@@ -88,12 +88,21 @@ button:hover{
     filter: brightness(120%);
 }
 
-.google{
+.mediaLogin{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
     position: relative;
+}
+
+.mediaLogin button{
+    display: flex;
+    gap: 20px;
+}
+
+.mediaLogin i{
+    font-size: 18px;
 }
 
 .or{

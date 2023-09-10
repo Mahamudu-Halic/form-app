@@ -3,6 +3,7 @@ import welcomeImage from "../images/welcome.png"
 import vision from "../images/our-vision.jpg"
 import process from "../images/our-process.jpg"
 import approach from "../images/our-approach.jpg"
+import "../styles/overview.css"
 
 const Overview = () => {
     return ( 
@@ -42,7 +43,7 @@ const Overview = () => {
                                 <img src={vision} alt="" />
                             </div>
                         </div>
-                        <div className="row">
+                        <div className="row reverse">
                             <div className="image">
                                 <img src={approach} alt="" />
                             </div>

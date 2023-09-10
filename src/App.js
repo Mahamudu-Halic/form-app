@@ -7,11 +7,9 @@ import { Context } from "./components/context.provider";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./components/home";
 const App = () => {
-  const {theme, isLight} = useContext(Context)
-  const [isValid, setIsValid] = useState(false)
-
+  const {theme, isLight, currentUser} = useContext(Context)
   const ProtectedRoute = ({children}) => {
-    if (!isValid){
+    if (!currentUser){
       return(
         <Routes>
         <Route path="/" element={<SignIn />} />

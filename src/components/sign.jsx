@@ -1,26 +1,38 @@
 import "../styles/sign.css"
 import Theme from "./theme";
-import { SignInWithGooglePopUp, createUserDatabase, SignInWithGithubPopUp } from "../utils/firebase.utils";
+import { SignInWithGooglePopUp, createUserDatabase, SignInWithGithubPopUp, SignInWithFacebookPopUp } from "../utils/firebase.utils";
+import { useContext } from "react";
+import { Context } from "./context.provider";
 
 const Sign = ({children}) => {
+    const {updateUserInfo} = useContext(Context)
     const handleGoogleClick = async () => {
         const {user} = await SignInWithGooglePopUp()
-        createUserDatabase(user)
+        const data = await createUserDatabase(user)
+        updateUserInfo(data)
     }
 
     const handleGithubClick = async () => {
         const {user} = await SignInWithGithubPopUp()
-        console.log(user)
+        createUserDatabase(user)
+    }
+
+    const handleFacebookClick = async () => {
+        const {user} = await SignInWithFacebookPopUp()
+        createUserDatabase(user)
     }
     return ( 
         <div className="sign">
             <Theme />
             <div className="hero">
                 <h1>welcome to LearnHub</h1>
-                <div className="google">
-                    <button onClick={handleGoogleClick}>Continue with Google</button>
-                    <button onClick={handleGithubClick}>Continue with GitHub</button>
-                    <button>Continue with Facebook</button>
+                <div className="mediaLogin">
+                    <button onClick={handleGoogleClick}>
+                        <i className="fa-brands fa-google"></i>Continue with Google</button>
+                    <button onClick={handleGithubClick}>
+                    <i className="fa-brands fa-github"></i>Continue with GitHub</button>
+                    <button onClick={handleFacebookClick}>
+                    <i className="fa-brands fa-facebook"></i>Continue with Facebook</button>
                 </div>
 
                 <div className="or">

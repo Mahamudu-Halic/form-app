@@ -1,0 +1,166 @@
+/* -------------OVERVIEW------------- */
+.overview{
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #06060658;
+  z-index: 3;
+}
+
+.welcome{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  padding: 20px;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.welcome-msg{
+  z-index: 5;
+}
+
+.welcome-msg h1{
+  font-size: 90px;
+  color: #fff;
+}
+
+.welcome-msg p{
+  font-size: 15px;
+  color: #e2d3d3;
+  letter-spacing: 2px;
+  line-height: 25px;
+  width: 100%;
+}
+
+.welcome-image{
+  width: 100%;
+}
+
+img{
+  width: 100%;
+}
+
+/* ----about us----- */
+.about-us, .services{
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.overview h2{
+  font-size: 50px;
+}
+
+.about-title{
+  text-align: center;
+}
+
+.about-msg p{
+  letter-spacing: 2px;
+  line-height: 25px;
+}
+
+.col{
+  padding: 20px;
+}
+
+.col .row{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  height: fit-content;
+  margin: 20px 0;
+  gap: 40px;
+}
+
+.content{
+  /* width: 50%; */
+}
+
+.content h3{
+  font-size: 40px;
+}
+
+.content p{
+  width: 300px;
+  line-height: 30px;
+  letter-spacing: 2px;
+}
+
+.image{
+  width: 50%;
+}
+
+/* ----services------- */
+.services{
+  text-align: center;
+}
+
+.cards{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 50px auto;
+  flex-wrap: wrap;
+}
+
+.card{
+  background: linear-gradient(#e0832cc9, #ff7b00);
+  padding: 20px;
+  border-radius: 5px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 300px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.card i{
+  font-size: 30px;
+}
+
+.card p{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card:hover{
+  filter: brightness(120%);
+}
+
+@media screen and (max-width: 700px) {
+    .cards{
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .card{
+        width: 100%;
+    }
+    .content p{
+        width: 100%;
+    }
+    .image{
+        width: 100%;
+    }
+
+    .reverse{
+        flex-direction: column-reverse;
+    }
+}
