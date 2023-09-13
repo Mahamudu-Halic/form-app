@@ -1,5 +1,8 @@
 /* -------------OVERVIEW------------- */
 .overview{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 .overlay{
@@ -52,14 +55,13 @@ img{
   width: 100%;
 }
 
-/* ----about us----- */
-.about-us, .services{
-  padding: 20px;
-  margin-top: 50px;
-}
-
 .overview h2{
   font-size: 50px;
+}
+
+/* ----about us----- */
+.about-us{
+  padding: 0 20px;
 }
 
 .about-title{
@@ -69,19 +71,22 @@ img{
 .about-msg p{
   letter-spacing: 2px;
   line-height: 25px;
+  margin-bottom: 50px;
 }
 
 .col{
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .col .row{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 0 20px;
   height: fit-content;
-  margin: 20px 0;
+  /* margin: 20px 0; */
   gap: 40px;
 }
 
@@ -106,14 +111,18 @@ img{
 /* ----services------- */
 .services{
   text-align: center;
+  padding: 0 20px;
 }
 
+.services h2{
+  margin-bottom: 30px;
+}
 .cards{
   display: flex;
   justify-content: space-between;
-  width: 80%;
-  margin: 50px auto;
+  /* width: 80%; */
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .card{
@@ -126,7 +135,8 @@ img{
   justify-content: center;
   align-items: center;
   gap: 20px;
-  width: 300px;
+  /* width: 300px; */
+  width: 30%;
   cursor: pointer;
   color: #fff;
 }

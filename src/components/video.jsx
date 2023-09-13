@@ -1,14 +1,14 @@
 import { Helmet } from "react-helmet";
 
-const Settings = () => {
+const VideoChat = () => {
     return ( 
         <div className="">
              <Helmet>
-                <title>Settings</title>
+                <title>VideoChat</title>
             </Helmet>
-            Settings page
+            VideoChat page
         </div>
      );
 }
  
-export default Settings;
+export default VideoChat;

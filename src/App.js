@@ -1,37 +1,50 @@
-import SignIn from "./components/sign-in";
-import SignUp from "./components/sign-up";
-
 import "./App.css"
-import { useContext, useState } from "react";
-import { Context } from "./components/context.provider";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import HomePage from "./components/home";
+import { 
+  ClerkProvider, 
+  SignedIn,
+  SignedOut,
+  SignIn,
+  SignUp,
+  RedirectToSignIn
+} from "@clerk/clerk-react";
 const App = () => {
-  const {theme, isLight, currentUser} = useContext(Context)
-  const ProtectedRoute = ({children}) => {
-    if (!currentUser){
-      return(
-        <Routes>
-        <Route path="/" element={<SignIn />} />
-        <Route path="/sign-up" element={<SignUp/>} />
-      </Routes>
-      )
-    }
+  
+  if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
+    throw new Error("Missing Publishable Key")
+  }
+  const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;  
 
-    return (children)
+  function ClerkProviderWithRoutes() {
+    const navigate = useNavigate();
+   
+    return (
+      <ClerkProvider publishableKey={clerkPubKey} navigate={(to) => navigate(to)}>
+        <SignedIn>
+          <HomePage />
+        </SignedIn>
+        <SignedOut>
+          <RedirectToSignIn />
+        </SignedOut>
+        <Routes>
+          <Route
+            path="/sign-in/*"
+            element={<SignIn routing="path" path="/sign-in" />}
+          />
+          <Route
+            path="/sign-up/*"
+            element={<SignUp routing="path" path="/sign-up" />}
+          />
+        </Routes>
+      </ClerkProvider>
+    );
   }
 
   return ( 
     <BrowserRouter>
-      <div className="app" style={isLight? {background: theme.light.background, color: theme.light.color} : {background: theme.dark.background, color: theme.dark.color}}>
-        <ProtectedRoute>
-          <HomePage />
-        </ProtectedRoute>
-        <Routes>
-        </Routes>
-      </div>
+      <ClerkProviderWithRoutes />
     </BrowserRouter>
   );
 }
- 
 export default App;

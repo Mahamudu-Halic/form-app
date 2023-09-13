@@ -1,5 +1,5 @@
 .sidebar{
-    width: 100px;
+    /* width: 100px; */
     position: sticky;
     height: 80vh;
     top: 80px;
@@ -11,6 +11,8 @@
     padding: 30px 25px;
     border-radius: 0;
     color: #797474;
+    cursor: pointer;
+    width: 80px;
 }
 
 .sidebar button i{

@@ -1,19 +1,19 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Chat from "./chat";
 import Contact from "./contact";
 import Courses from "./courses";
 import Navbar from "./navbar";
 import Overview from "./overview";
-import Settings from "./settings";
+import VideoChat from "./video";
 import SideBar from "./sidebar";
-import SignIn from "./sign-in";
-import SignUp from "./sign-up";
 import Upload from "./upload";
+import { useContext } from "react";
+import { Context } from "./context.provider";
 
 const HomePage = () => {
+    const {theme, isLight} = useContext(Context)
     return ( 
-        <>
-            <Navbar />
+        <div className="home" style={isLight? {background: theme.light.background, color: theme.light.color} : {background: theme.dark.background, color: theme.dark.color}}>            <Navbar />
             <div className="align">
                 <SideBar />
                 <div className="routes">
@@ -21,7 +21,7 @@ const HomePage = () => {
                         <Route path="/" element={<Overview />} />
                         <Route path="/courses" element={<Courses/>} />
                         <Route path="/upload" element={<Upload/>} />
-                        <Route path="/settings" element={<Settings/>} />
+                        <Route path="/video-chat" element={<VideoChat/>} />
                         <Route path="/chat" element={<Chat/>} />
                         <Route path="/contact" element={<Contact/>} />
                     </Routes>
@@ -31,8 +31,8 @@ const HomePage = () => {
                     </footer>
                 </div>
             </div>
-        </>
-     );
+        </div>
+    );
 }
  
 export default HomePage;

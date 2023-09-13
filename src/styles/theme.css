@@ -7,9 +7,9 @@
 
 .menu{
     background-color: #454547;
-    padding: 10px;
     cursor: pointer;
-    width: 50px;
+    border: none;
+    border-radius: 50%;
 }
 
 .menu i{
@@ -18,7 +18,7 @@
 }
 
 .select{
-    background-color: gray;
+    background-color: #262525;
     display: flex;
     flex-direction: column;
     width: 130px;
