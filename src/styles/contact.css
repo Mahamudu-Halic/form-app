@@ -18,18 +18,31 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 200px;
+    /* padding: 200px; */
 }
 
 
 .contact-title{
     z-index: 5;
     color: #fff;
-    
+    /* width: 100%; */
+    position: relative;
+    padding-bottom: 20px;
 }
 
 .contact-title h2{
     font-size: 50px;
+}
+
+.contact-title::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    /* right: 210px; */
+    width: 150px;
+    height: 1px;
+    background-color: red;
 }
 
 
@@ -45,7 +58,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    width: 80%;
+    width: 90%;
     flex-wrap: wrap;
     margin: 0 auto;
     gap: 20px;
@@ -78,7 +91,9 @@
 }
 
 .col1, .col2{
-    width: 450px;
+    width: 45%;
+    min-width: 320px;
+    /* width: 40%; */
 }
 
 .col1 i{
@@ -132,4 +147,10 @@ form button:hover{
 iframe{
     width: 100%;
     height: 300px;
+}
+
+@media screen and (max-width: 700px) {
+    .col1, .col2{
+        width: 100%;
+    }
 }

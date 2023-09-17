@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 import Chat from "./chat";
 import Contact from "./contact";
 import Courses from "./courses";
@@ -9,6 +9,13 @@ import SideBar from "./sidebar";
 import Upload from "./upload";
 import { useContext } from "react";
 import { Context } from "./context.provider";
+import Footer from "./footer";
+import CourseMaterials from "./course-materials";
+
+function BlogPost() {
+    let { param } = useParams();
+    return <div>Now showing post {param}</div>;
+  }  
 
 const HomePage = () => {
     const {theme, isLight} = useContext(Context)
@@ -24,11 +31,11 @@ const HomePage = () => {
                         <Route path="/video-chat" element={<VideoChat/>} />
                         <Route path="/chat" element={<Chat/>} />
                         <Route path="/contact" element={<Contact/>} />
+                        <Route path="/courses/:param" element={<CourseMaterials />} />
                     </Routes>
 
-                    <footer>
-                        footer goes here
-                    </footer>
+                    <Footer />
+                    
                 </div>
             </div>
         </div>

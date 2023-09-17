@@ -6,7 +6,7 @@
 }
 
 .menu{
-    background-color: #454547;
+    background: none;
     cursor: pointer;
     border: none;
     border-radius: 50%;
@@ -38,6 +38,7 @@
     border: none;
     border-radius: 0;
     color: #fff;
+    font-size: 16px;
 }
 
 .select button:hover{

@@ -1,0 +1,91 @@
+.courses{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.courses h3, .courses h2{
+    text-transform: capitalize;
+}
+
+.courses button{
+    width: fit-content;
+    padding: 10px;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.courses .course-links a, .back-link{
+    color: #fff;
+    text-decoration: none;
+    background-color: grey;
+    width: fit-content;
+    padding: 10px;
+    text-transform: capitalize;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.course-links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.empty{
+    /* width: 100%; */
+    margin: auto;
+}
+
+.empty img{
+    width: 500px;
+}
+
+.courses .back-link{
+    position: fixed;
+    right: 20px;
+    top: 45%;
+    background-color: #8a3304;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 5px 9px;
+}
+
+.courses .course-links a:hover,
+.back-link:hover, 
+.doc:hover
+{
+    filter: brightness(120%);
+}
+
+.files{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.files .doc{
+    width: 200px;
+    background-color: #575a57;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+
+.doc a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.videos .video{
+    width: 350px;
+}
+
+.video video{
+    width: 100%;
+}

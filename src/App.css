@@ -20,6 +20,7 @@
   justify-content: space-between;
   border-left: solid 1px gray;
   min-height: 90vh;
+  width: 100%;
 }
 
 footer{

@@ -5,15 +5,26 @@ import {GoogleAuthProvider, GithubAuthProvider, FacebookAuthProvider, getAuth, s
 import {getFirestore, doc, setDoc, getDoc} from "firebase/firestore"
 import {getDownloadURL, getStorage, ref, uploadBytesResumable} from "firebase/storage"
 
+// const firebaseConfig = {
+//     apiKey: "AIzaSyD_4shUdXKt6gbl2jxU3IBRrS6ktI6qMoQ",
+//     authDomain: "newlearnhub-da0cd.firebaseapp.com",
+//     projectId: "newlearnhub-da0cd",
+//     storageBucket: "newlearnhub-da0cd.appspot.com",
+//     messagingSenderId: "331986547009",
+//     appId: "1:331986547009:web:3b6717306e162f398371c0",
+//     measurementId: "G-5CK4NC6R8W"
+// };
+
 const firebaseConfig = {
-    apiKey: "AIzaSyD_4shUdXKt6gbl2jxU3IBRrS6ktI6qMoQ",
-    authDomain: "newlearnhub-da0cd.firebaseapp.com",
-    projectId: "newlearnhub-da0cd",
-    storageBucket: "newlearnhub-da0cd.appspot.com",
-    messagingSenderId: "331986547009",
-    appId: "1:331986547009:web:3b6717306e162f398371c0",
-    measurementId: "G-5CK4NC6R8W"
+    apiKey: "AIzaSyDfnAY2Y_kAaqWPasi_EApb_MJStOm5a-k",
+    authDomain: "learnhub-a3bd7.firebaseapp.com",
+    projectId: "learnhub-a3bd7",
+    storageBucket: "learnhub-a3bd7.appspot.com",
+    messagingSenderId: "423354683728",
+    appId: "1:423354683728:web:c5e1ee1ed09169bee19c55",
+    measurementId: "G-8S1TRQW4SS"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

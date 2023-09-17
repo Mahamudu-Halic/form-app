@@ -36,21 +36,28 @@ const ContextProvider = ({children}) => {
         setUserInfo(data)
     }
 
-    useEffect(() => {
-        const unsub = onAuthStateChanged(auth, user => {
-            try {
-                setCurrentUser(user)
-            } catch (error) {
-                
-            }
-        })
 
-        return(
-        () => {
-            unsub()
-        }
-        )
-    }, [])
+    //course list
+    const courseList = [
+        //college of sciene
+        ['computer science', 'mathematics', 'chemistry', 'physics', 'theoritical and applied biology', 'environmental science'],
+
+        //college of engineering
+        [ 'electrical engineering', 'mechanical engineering', 'telecommunication engineering', 'material engineering', 'computer engineering', 'aerospace engineering'],
+
+        //college of humanity and social sciences
+        [ 'commercial law', 'private law', 'public law', 'economics', 'services management', 'social work and sociology', 'logistics and supply chain management', 'accounting and finance', ],
+
+        //college of art and built environment
+        ['architecture', 'industrial art', 'painting and sculpture', 'planning', 'communication design',],
+
+        //college of health science
+        ['anatomy', 'herbal medicine', 'nursing', 'medicine', 'pharmaceutics'],
+
+        //college of agriculture and natural resources
+        ['animal science', 'crop science', 'agroforestry', 'social forestery', 'soil science']
+    ]
+
 
     const contextValues = {
         theme,
@@ -58,9 +65,7 @@ const ContextProvider = ({children}) => {
         isLight,
         setIsLight,
         changeTheme,
-        currentUser,
-        updateUserInfo,
-        userInfo
+        courseList
     }
 
 

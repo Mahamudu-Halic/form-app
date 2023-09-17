@@ -1,8 +1,8 @@
-.sidebar{
+.items{
     /* width: 100px; */
     position: sticky;
     height: 80vh;
-    top: 80px;
+    top: 63px;
 }
 
 .sidebar button{
@@ -22,4 +22,40 @@
 .sidebar button:hover{
     background-color: #3b3939;
     color: #fff;
+}
+
+.hamburger{
+    display: none;
+}
+
+@media screen and (max-width: 700px){
+    .items{
+        background: #372e2e;
+        position: fixed;
+        z-index: 200;
+        height: 100vh;
+        left: -200px;
+        transition: 0.3s ease;
+    }
+
+    .active{
+        left: 0;
+    }
+
+    .hamburger{
+        display: block;
+        color: #fff;
+        background-color: #d7580eb9;
+        padding: 10px;
+        border-radius: 50%;
+        width: fit-content;
+        position: fixed;
+        z-index: 300;
+        cursor: pointer;
+        left: 20px;
+    }
+
+    .hamburger i{
+        font-size: 20px;
+    }
 }

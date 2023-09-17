@@ -1,9 +1,18 @@
+import { useState } from "react";
 import "../styles/sidebar.css"
 import { NavLink } from "react-router-dom";
 const SideBar = () => {
+    const [active, setIsActive] = useState(false)
+
+    const handleActive = () => {
+        setIsActive(!active)
+    }
     return ( 
         <div className="sidebar">
-            <div className="items">
+            <div className="hamburger" onClick={handleActive}>
+                <i className="fa-solid fa-bars"></i>
+            </div>
+            <div className={`items ${active && "active"}`}>
                 <div className="home">
                     <NavLink to="/">
                         <button><i className="fa-solid fa-home"></i></button>

@@ -12,9 +12,7 @@ const Contact = () => {
                 <div className="overlay"></div>
                 <div className="contact-title">
                     <h2>Contact Us</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, qui doloribus inventore quidem suscipit, architecto ipsum quisquam facilis nostrum voluptas cupiditate maiores! Reiciendis sed officia voluptatum. Ad repellat dignissimos modi?</p>
                 </div>
-
             </div>
             <div className="row">
                 <div className="col1">
