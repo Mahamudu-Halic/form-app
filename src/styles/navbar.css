@@ -9,56 +9,9 @@
     background-color: #fff;
 }
 
-.logout{
-    background-color: #e0832ce8;
-    color: white;
-}
-
 .buttons{
     display: flex;
     gap: 20px;
     justify-content: center;
     align-items: center;
-}
-
-.profile{
-    width: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.navbar img{
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.options{
-    background-color: rgb(73, 66, 66);
-    border-radius: 5px;
-    position: absolute;
-    min-width: 300px;
-    right: 20px;
-    top: 80px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.account-img{
-    border-radius: 50%;
-    /* overflow: hidden; */
-    width: 30px;
-}
-.options .account {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    border-bottom: solid #6b6666 1px;
-    padding-bottom: 20px;
-}
-
-.info p{
-    font-size: 13px;
 }

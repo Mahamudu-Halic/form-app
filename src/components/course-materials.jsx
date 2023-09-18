@@ -11,9 +11,8 @@ import "../styles/courses.css"
 const CourseMaterials = () => {
     const [getFiles, setGetFiles] = useState([])
     const [getVideos, setGetVideos] = useState([])
+    const [isActive, setIsActive] = useState("1")
     const {param} = useParams()
-    // window.location.reload()
-    console.log(window.location)
     useEffect(() => {
         try {
             //fetch files from firebase
@@ -34,10 +33,22 @@ const CourseMaterials = () => {
         }
     }, [])
 
-    
+    const yearList = [1, 2, 3, 4, 5, 6]
+
+    // handleActiveClass
+    const handleActiveClass = year => {
+        setIsActive(year)
+    }
     return ( 
-        <div className="courses">
+        <div className="courses course-material">
             <h2>{param}</h2>
+            <div className="year">
+                {
+                    yearList.map(year => (
+                        <button onClick={() => handleActiveClass(year)} className={`${isActive == year ? "active" : ""}`}>year {year}</button>
+                    ))
+                }
+            </div>
             {
                 //no files or videos
                 !getFiles.length && 

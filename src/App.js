@@ -9,6 +9,7 @@ import {
   SignUp,
   RedirectToSignIn
 } from "@clerk/clerk-react";
+import ContextProvider from "./components/context.provider";
 const App = () => {
   
   if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {
@@ -43,7 +44,9 @@ const App = () => {
 
   return ( 
     <BrowserRouter>
-      <ClerkProviderWithRoutes />
+      <ContextProvider>
+        <ClerkProviderWithRoutes />
+      </ContextProvider>
     </BrowserRouter>
   );
 }

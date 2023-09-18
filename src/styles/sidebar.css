@@ -13,18 +13,25 @@
     color: #797474;
     cursor: pointer;
     width: 80px;
+    transition: 0.3s ease;
+}
+
+.close{
+    display: none;
+    transition: 0.3s ease;
 }
 
 .sidebar button i{
     font-size: 25px;
 }
 
-.sidebar button:hover{
+.sidebar button:hover, .close:hover, .hamburger:hover{
     background-color: #3b3939;
     color: #fff;
 }
 
 .hamburger{
+    transition: 0.3s ease;
     display: none;
 }
 
@@ -45,17 +52,30 @@
     .hamburger{
         display: block;
         color: #fff;
-        background-color: #d7580eb9;
+        background-color: #372e2e;
+        border: solid 1px #372e2e;
         padding: 10px;
-        border-radius: 50%;
+        border-radius: 10px;
         width: fit-content;
         position: fixed;
-        z-index: 300;
+        z-index: 200;
         cursor: pointer;
         left: 20px;
+        top: 80px;
     }
 
     .hamburger i{
         font-size: 20px;
+    }
+
+    .close{
+        display: block;
+        width: fit-content;
+        cursor: pointer;
+        padding: 5px 10px;
+        border: solid 1px #797474;
+        border-radius: 10px;
+        margin: 5px 5px 0 auto;
+        color: #797474;
     }
 }

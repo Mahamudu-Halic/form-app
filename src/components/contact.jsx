@@ -1,6 +1,11 @@
 import { Helmet } from "react-helmet";
 import "../styles/contact.css"
 const Contact = () => {
+
+    // handleSubmit
+    const handleSubmit = e => {
+        e.preventDefault();
+    }
     return ( 
         <div className="contact">
             <Helmet>
@@ -60,24 +65,34 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* -----col2--------- */}
+
                 <div className="col2">
                     <h2>Ready to Get Started</h2>
                     <p>Your email address will not be published. Required fields are marked</p>
-                    <form action="">
+
+                    {/* form */}
+                    <form action="" onSubmit={handleSubmit}>
+                        {/* full name */}
                         <div className="form-group">
-                            <label htmlFor="fullName">Full Name</label>
-                            <input type="text" id="fullName" />
+                            <label htmlFor="name">Name</label>
+                            <input type="text" id="name" required/>
                         </div>
+
+                        {/* email address */}
                         <div className="form-group">
                             <label htmlFor="email">Email Address</label>
-                            <input type="email" id="email" />
+                            <input type="email" id="email" placeholder="example@address.com"/>
                         </div>
+
+                        {/* phone number */}
                         <div className="form-group">
                             <label htmlFor="phone">Phone Number</label>
-                            <input type="text" id="phone" />
+                            <input type="text" id="phone" placeholder="+233 552 802 788"/>
                         </div>
                         <div className="form-group">
-                            <textarea name="message" id="" cols="30" rows="10" placeholder="Write a message"></textarea>
+                            <textarea name="message" id="" cols="30" rows="10" placeholder="Write a message..." required></textarea>
                         </div>
 
                         <label htmlFor="terms">

@@ -19,7 +19,7 @@ const ContextProvider = ({children}) => {
         {
             light: {
                 color: "#121212",
-                background: "#fff"
+                background: "#e9e3e3"
             },
             dark: {
                 color: "#fff",

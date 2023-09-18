@@ -4,13 +4,13 @@ import Contact from "./contact";
 import Courses from "./courses";
 import Navbar from "./navbar";
 import Overview from "./overview";
-import VideoChat from "./video";
 import SideBar from "./sidebar";
 import Upload from "./upload";
 import { useContext } from "react";
 import { Context } from "./context.provider";
 import Footer from "./footer";
 import CourseMaterials from "./course-materials";
+import Profile from "./profile";
 
 function BlogPost() {
     let { param } = useParams();
@@ -28,7 +28,7 @@ const HomePage = () => {
                         <Route path="/" element={<Overview />} />
                         <Route path="/courses" element={<Courses/>} />
                         <Route path="/upload" element={<Upload/>} />
-                        <Route path="/video-chat" element={<VideoChat/>} />
+                        <Route path="/profile" element={<Profile/>} />
                         <Route path="/chat" element={<Chat/>} />
                         <Route path="/contact" element={<Contact/>} />
                         <Route path="/courses/:param" element={<CourseMaterials />} />

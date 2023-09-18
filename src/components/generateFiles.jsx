@@ -9,7 +9,7 @@ const GenerateFiles = props => {
     return(
         <div className='doc'>
             <a href={`https://firebasestorage.googleapis.com/v0/b/learnhub-a3bd7.appspot.com/o/overview%2Ffiles%2F${content.name}?alt=media&token=85e91ed4-0860-49c1-9242-982c8d6fe6e7`}>
-                <div className='files'>
+                <div className='file'>
                     <div className="file-image">
                         <img src={`${content.name.includes('.doc') ? word : content.name.includes('.pdf') ? pdf : powerpoint}`} 
                             alt="" 

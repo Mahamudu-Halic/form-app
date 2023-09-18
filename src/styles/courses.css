@@ -1,9 +1,51 @@
-.courses{
+.courseList{
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     position: relative;
+}
+
+.course-material{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.year{
+    display: flex;
+    gap: 20px;
+    overflow: auto;
+    z-index: 1000;
+}
+
+.year button.active{
+    filter: brightness(150%);
+}
+
+.course-material .year button{
+    background-color: #797474;
+    color: white;
+    width: fit-content;
+}
+
+.course-bg{
+    background: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.course-bg h2{
+    font-size: 50px;
+    color: #fcf8f8;
+    z-index: 300;
 }
 
 .courses h3, .courses h2{
@@ -51,20 +93,22 @@
     right: 20px;
     top: 45%;
     background-color: #8a3304;
-    border-radius: 50%;
+    border-radius: 10px;
     font-size: 20px;
     padding: 5px 9px;
 }
 
 .courses .course-links a:hover,
 .back-link:hover, 
-.doc:hover
+.doc:hover,
+.video:hover
 {
     filter: brightness(120%);
 }
 
 .files{
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -73,8 +117,16 @@
     width: 200px;
     background-color: #575a57;
     border-radius: 5px;
-    text-align: center;
     padding: 10px;
+}
+
+.file{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .doc a{
@@ -82,10 +134,41 @@
     text-decoration: none;
 }
 
+.videos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .videos .video{
     width: 350px;
+    background-color: #575a57;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video p{
+    padding: 10px 0;
+    text-transform: capitalize;
+    color: #fff;
 }
 
 .video video{
     width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .videos .video {
+        width: 100%;
+        
+    }
+
+    .files{
+        /* width: 100%; */
+        justify-content: center;
+    }
+
+    .course-bg h2{
+        font-size: 40px;
+    }
 }

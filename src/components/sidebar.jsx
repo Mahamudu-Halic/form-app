@@ -7,42 +7,59 @@ const SideBar = () => {
     const handleActive = () => {
         setIsActive(!active)
     }
+
+    const sideBarList = [
+        {
+            icon: "fa-solid fa-home",
+            title: "home",
+            link: "/",
+        },
+        {
+            icon: "fa-solid fa-book",
+            title: "course",
+            link: "courses",
+        },
+        {
+            icon: "fa-solid fa-upload",
+            title: "upload",
+            link: "upload",
+        },
+        {
+            icon: "fa-regular fa-message",
+            title: "community",
+            link: "chat",
+        },
+        {
+            icon: "fa-solid fa-headset",
+            title: "contact",
+            link: "contact",
+        },
+        {
+            icon: "fa-solid fa-user",
+            title: "profile",
+            link: "profile",
+        },
+    ]
     return ( 
         <div className="sidebar">
             <div className="hamburger" onClick={handleActive}>
                 <i className="fa-solid fa-bars"></i>
             </div>
             <div className={`items ${active && "active"}`}>
-                <div className="home">
-                    <NavLink to="/">
-                        <button><i className="fa-solid fa-home"></i></button>
-                    </NavLink>
+                <div className="close" onClick={handleActive}>
+                    <i className="fa-solid fa-close"></i>
                 </div>
-                <div className="Courses">
-                    <NavLink to="/courses">
-                        <button><i className="fa-solid fa-book"></i></button>
-                    </NavLink>
-                </div>
-                <div className="Upload">
-                    <NavLink to="/upload">
-                        <button><i className="fa-solid fa-upload"></i></button>
-                    </NavLink>
-                </div>
-                <div className="Chat">
-                    <NavLink to="chat">
-                        <button><i className="fa-regular fa-message"></i></button>
-                    </NavLink>
-                </div>
-                <div className="video">
-                    <NavLink to="video-chat">
-                        <button><i className="fa-solid fa-video"></i></button>
-                    </NavLink>
-                </div>
-                <div className="contact">
-                    <NavLink to="contact">
-                        <button><i className="fa-solid fa-headset"></i></button>
-                    </NavLink>
-                </div>
+                {
+                    sideBarList.map(list => {
+                        return(
+                            <div className="home" title={list.title} onClick={handleActive}>
+                                <NavLink to={list.link}>
+                                    <button><i className={list.icon}></i></button>
+                                </NavLink>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </div>
      );
