@@ -37,8 +37,8 @@
 
 .course-content{
     overflow: auto;
-    height: 65vh;
-
+    max-height: 65vh;
+    min-height: 0vh;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -134,10 +134,11 @@
 }
 
 .files .doc{
-    width: 200px;
+    width: 130px;
     background-color: #575a57;
     border-radius: 5px;
     padding: 10px;
+    font-size: 12px;
 }
 
 .file{
@@ -185,7 +186,7 @@
 
     .files{
         /* width: 100%; */
-        justify-content: center;
+        /* justify-content: center; */
     }
 
     .course-bg h2{
@@ -194,5 +195,11 @@
 
     .course-material{
         padding: 60px 20px 20px;
+    }
+
+    .year::after{
+        content: "";
+        height: 0;
+        width: 0;
     }
 }
