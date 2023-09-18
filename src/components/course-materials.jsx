@@ -58,32 +58,35 @@ const CourseMaterials = () => {
                 </div>
             }
 
-            <div className="files">
-            {
-                //getFiles
-                getFiles.map((content, i) =>{
-                    return(
-                        <GenerateFiles 
-                        key={i}
-                        content={content}
-                        />
-                    )
-                })
-            }
-            </div>
-
-            <div className="videos">
-            {
-                //getVideos
-                getVideos.map((content, i) =>{
-                    return(
-                        <GenerateVideos 
-                        key={i}
-                        content={content}
-                        />
+            {/* course contents */}
+            <div className="course-content">
+                <div className="files">
+                {
+                    //getFiles
+                    getFiles.map((content, i) =>{
+                        return(
+                            <GenerateFiles 
+                            key={i}
+                            content={content}
+                            />
                         )
                     })
                 }
+                </div>
+
+                <div className="videos">
+                {
+                    //getVideos
+                    getVideos.map((content, i) =>{
+                        return(
+                            <GenerateVideos 
+                            key={i}
+                            content={content}
+                            />
+                            )
+                        })
+                    }
+                </div>
             </div>
 
             <Link to="/courses" className="back-link"><i className="fa-solid fa-arrow-left-long"></i></Link>

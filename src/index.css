@@ -29,7 +29,7 @@ code {
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:horizontal {
-  background: #2e2e2e; 
+  background: #575a57; 
   border-radius: 10px;
 }
 
@@ -37,5 +37,9 @@ code {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #b30000; 
+  background: #575a57; 
+}
+
+.cl-internal-b3fm6y, .cl-internal-hegiim{
+  display: none;
 }
