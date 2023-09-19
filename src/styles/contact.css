@@ -5,8 +5,6 @@
     gap: 50px;
 }
 
-
-
 .contact-us{
     position: relative;
     background: url("../images/contact-us.jpg");
@@ -103,7 +101,21 @@
 
 .col2{
     background-color: #797474;
+    position: relative;
     /* color: #fff; */
+}
+
+.col2 .feedback{
+    padding: 10px;
+    color: #fff;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    bottom: 10px;
+}
+
+.col2 button.active{
+    right: 10px;
 }
 
 .col2 form{

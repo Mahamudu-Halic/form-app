@@ -2,20 +2,32 @@ import { Helmet } from "react-helmet";
 import "../styles/contact.css"
 import emailjs from '@emailjs/browser';
 import React, { useRef } from 'react';
+import { useState } from "react";
 
 const Contact = () => {
 
     const form = useRef();
+    const [sending, setSending] = useState(false)
+    const [sent, setSent] = useState(false)
 
     // handleSubmit
     const handleSubmit = e => {
         e.preventDefault();
         try {
+            setSending(true)
             emailjs.sendForm("service_19fktnp", "template_bn16f1d", form.current, "G73m60nk1gLoLgXNR")
             .then((result) => {
+                setSending(false)
+                setSent(true)
                 console.log(result.text);
                 console.log("message sent")
-            }, (error) => {
+            })
+            .then(() => {
+                setTimeout(() => {
+                    setSent(false)
+                }, 3000);
+            })
+            .catch(error => {
                 console.log(error.text);
             });
         } catch (error) {
@@ -112,12 +124,17 @@ const Contact = () => {
                         </div>
 
                         <label htmlFor="terms">
-                            <input type="checkbox" id="terms"/>
+                            <input type="checkbox" id="terms" required/>
                             Accept terms and privacy policy
                         </label>
 
                         <button>Send Message</button>
                     </form>
+
+                    <button className={`feedback ${sending && "active"}`}>sending...</button>
+                    <button className={`feedback ${sent && "active"}`}>sent</button>
+                    {/* <button className="feedback active">asjkld</button> */}
+
                 </div>
             </div>
 
