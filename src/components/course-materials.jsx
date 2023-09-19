@@ -13,17 +13,18 @@ const CourseMaterials = () => {
     const [getVideos, setGetVideos] = useState([])
     const [isActive, setIsActive] = useState("1")
     const {param} = useParams()
+    console.log(param)
     useEffect(() => {
         try {
             //fetch files from firebase
-            const files = ref(storage, `courses/${param}/files`)
+            const files = ref(storage, `courses/${param}/year/${isActive}/files`)
             listAll(files)
             .then(res => {
                 setGetFiles(res.items)
             })
             
             //fetch videos from firebase
-            const videos = ref(storage, `courses/${param}/videos`)
+            const videos = ref(storage, `courses/${param}/year/${isActive}/videos`)
             listAll(videos)
             .then(res => {
                 setGetVideos(res.items)
@@ -31,7 +32,7 @@ const CourseMaterials = () => {
         } catch (error) {
             console.log('courses', error)
         }
-    }, [])
+    }, [isActive])
 
     const yearList = [1, 2, 3, 4, 5, 6]
 

@@ -17,7 +17,6 @@
     display: flex;
     gap: 20px;
     overflow: auto;
-    /* z-index: 1000; */
     padding-bottom: 20px;
     position: relative;
 }
@@ -150,6 +149,13 @@
     text-align: center;
 }
 
+.file p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100px;
+}
+
 .doc a{
     color: #fff;
     text-decoration: none;
@@ -172,6 +178,7 @@
     padding: 10px 0;
     text-transform: capitalize;
     color: #fff;
+    
 }
 
 .video video{

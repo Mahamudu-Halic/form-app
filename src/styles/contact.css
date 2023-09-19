@@ -113,7 +113,7 @@
     gap: 20px;
 }
 
-.form-group input, textarea{
+.form-group input, textarea, select{
     width: 100%;
     padding: 10px;
     border: solid 1px #efeded;
