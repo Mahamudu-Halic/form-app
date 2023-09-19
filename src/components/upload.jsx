@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet"
 var fileName = ''
 const Upload = () => {
     //useContext
-    const {courseList} = useContext(Context)
+    const {courseList, isLight} = useContext(Context)
     //useState
     const [file, setFile] = useState('')
     const [year, setYear] = useState('select year')
@@ -99,7 +99,7 @@ const Upload = () => {
                 />
             </div> */}
 
-            <div className="form">
+            <div className="form" style={isLight ? {background: "#fff"} : {background: "#232323"}}>
                 <form action="#" onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="file">{fileName}</label>
@@ -151,8 +151,8 @@ const Upload = () => {
                     <button><i className='fa-solid fa-upload'></i> upload</button>
                     {/* {uploading && <p>uploading...</p>} */}
                     {/* {success && <p>upload successful</p>} */}
-                    <button className={`feedback ${uploading && "active"}`}>uploading...</button>
-                    <button className={`feedback ${success && "active"}`}>upload successful</button>
+                    <button className={`feedback ${uploading && "activate"}`}>uploading...</button>
+                    <button className={`feedback ${success && "activate"}`}>upload successful</button>
                 </form>
             </div>
         </div>

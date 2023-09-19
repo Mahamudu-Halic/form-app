@@ -210,3 +210,18 @@
         width: 0;
     }
 }
+
+button.comments{
+    background: none;
+    color: #fff;
+    z-index: 40;
+    transition: 0.3s ease;
+}
+
+button.comments:hover{
+    background: #272821;
+}
+
+.rating{
+    color: #c3af40;
+}

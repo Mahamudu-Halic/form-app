@@ -131,8 +131,8 @@ const Contact = () => {
                         <button>Send Message</button>
                     </form>
 
-                    <button className={`feedback ${sending && "active"}`}>sending...</button>
-                    <button className={`feedback ${sent && "active"}`}>sent</button>
+                    <button className={`feedback ${sending && "activate"}`}>sending...</button>
+                    <button className={`feedback ${sent && "activate"}`}>sent</button>
                     {/* <button className="feedback active">asjkld</button> */}
 
                 </div>

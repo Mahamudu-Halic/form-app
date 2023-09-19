@@ -2,6 +2,8 @@ import word from '../images/word.png'
 import pdf from '../images/pdf.png'
 import powerpoint from '../images/powerpoint.png'
 import "../styles/courses.css"
+import Comment from './comment'
+import Rating from './rating'
 // import Comment from './comment'
 
 const GenerateFiles = props => {
@@ -19,7 +21,8 @@ const GenerateFiles = props => {
                 </div>
             </a>
 
-            {/* <Comment contentName={content.name}/> */}
+            <Comment />
+            {/* <Rating /> */}
         </div>
     )
 }
