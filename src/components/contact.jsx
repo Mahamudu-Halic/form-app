@@ -1,10 +1,26 @@
 import { Helmet } from "react-helmet";
 import "../styles/contact.css"
+import emailjs from '@emailjs/browser';
+import React, { useRef } from 'react';
+
 const Contact = () => {
+
+    const form = useRef();
 
     // handleSubmit
     const handleSubmit = e => {
         e.preventDefault();
+        try {
+            emailjs.sendForm("service_19fktnp", "template_bn16f1d", form.current, "G73m60nk1gLoLgXNR")
+            .then((result) => {
+                console.log(result.text);
+                console.log("message sent")
+            }, (error) => {
+                console.log(error.text);
+            });
+        } catch (error) {
+            console.log(error)
+        }
     }
     return ( 
         <div className="contact">
@@ -73,23 +89,23 @@ const Contact = () => {
                     <p>Your email address will not be published. Required fields are marked</p>
 
                     {/* form */}
-                    <form action="" onSubmit={handleSubmit}>
+                    <form action="" ref={form} onSubmit={handleSubmit}>
                         {/* full name */}
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
-                            <input type="text" id="name" required/>
+                            <input type="text" id="name" required name="user_name"/>
                         </div>
 
                         {/* email address */}
                         <div className="form-group">
                             <label htmlFor="email">Email Address</label>
-                            <input type="email" id="email" placeholder="example@address.com"/>
+                            <input type="email" id="email" name="user_email" placeholder="example@address.com"/>
                         </div>
 
                         {/* phone number */}
                         <div className="form-group">
                             <label htmlFor="phone">Phone Number</label>
-                            <input type="text" id="phone" placeholder="+233 552 802 788"/>
+                            <input type="text" id="phone" name="user_number" placeholder="+233 552 802 788"/>
                         </div>
                         <div className="form-group">
                             <textarea name="message" id="" cols="30" rows="10" placeholder="Write a message..." required></textarea>
