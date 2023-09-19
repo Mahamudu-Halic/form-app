@@ -40,9 +40,12 @@
         background: #372e2e;
         position: fixed;
         z-index: 200;
-        height: 100vh;
+        height: 100%;
+        top: 50px;
         left: -200px;
         transition: 0.3s ease;
+        padding-top: 20px;
+        overflow: auto;
     }
 
     .active{

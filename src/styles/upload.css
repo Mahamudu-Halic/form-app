@@ -18,7 +18,7 @@
 
 .upload-home h2{
     font-size: 40px;
-    z-index: 200;
+    z-index: 5;
 }
 
 .form{
@@ -42,7 +42,7 @@
 
 }
 
-label{
+.upload label{
     display: block;
     height: 50px;
     width: 100%;

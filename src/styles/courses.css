@@ -64,7 +64,7 @@
 .course-bg h2{
     font-size: 50px;
     color: #fcf8f8;
-    z-index: 300;
+    z-index: 5;
 }
 
 .courses h3, .courses h2{
