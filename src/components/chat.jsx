@@ -6,11 +6,12 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { useRef } from "react";
 import Empty from "./empty";
-import { arrayUnion, collection, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+import { arrayUnion, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "../utils/firebase.utils";
 
 var chatRef
 const Chat = () => {
+    const docRef = doc(db, "chats", "topics")
     const date = new Date()
     const [messages, setMessages] = useState([])
     const [topic, setTopic] = useState([])
@@ -24,12 +25,11 @@ const Chat = () => {
     const handleShowDashboard = () => {
         setShowDashboard(!showDashboard)
     }
-    const docRef = doc(db, "chats", "topics")
     //get topics
     useEffect(() => {
         const getTopics = async () => {
+            const docRef = doc(db, "chats", "topics")
             const docSnap = await getDoc(docRef)
-
             try {
                 if(docSnap.exists()){
                     setTopic(docSnap.data().topic)
@@ -76,7 +76,7 @@ const Chat = () => {
     // filter topics
     useEffect(() => {
         const newtopics = topic.filter(topic => {
-            return topic.toLowerCase().includes(searchField)
+            return topic.toLowerCase().includes(searchField.toLowerCase())
         })
 
         setFilteredTopics(newtopics)
@@ -151,7 +151,7 @@ const Chat = () => {
             </Helmet>
             
             <div className="chat-community" style={isLight ? {background: "#F2F4F6"} : {background: "#272821"}}>
-                <div className={`${showDashboard && "overlay"}`}></div>
+                <div className={`${showDashboard && "overlay"}`} onClick={handleShowDashboard}></div>
                 <div className="arrow">
                     <button onClick={handleShowDashboard}>
                         <i className={`fa-solid ${showDashboard ? "fa-chevron-left" : "fa-chevron-right"}`}></i>
@@ -187,7 +187,7 @@ const Chat = () => {
                         className="chat-messages">
                         {
                         //no files or videos
-                            messages.length == 0 &&
+                            messages.length === 0 &&
                             <Empty />
                         }
                         {
