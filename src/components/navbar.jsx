@@ -9,7 +9,7 @@ const Navbar = () => {
     return ( 
         <div className="navbar" style={isLight? {background: "#bbb"}: {background: "#2c2929"}}>
             <div className="brand">
-                <h1>LearnHub</h1>
+                <h1>ShareSync</h1>
                 
             </div>
             <div className="buttons">

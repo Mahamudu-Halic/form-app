@@ -100,7 +100,7 @@
 }
 
 .col2{
-    background-color: #797474;
+    background-color: #434141;
     position: relative;
     /* color: #fff; */
 }
@@ -175,12 +175,30 @@ iframe{
     height: 300px;
 }
 
+
 @media screen and (max-width: 700px) {
+    .content p{
+        font-size: 14px;
+    }
+    .contact h2{
+        font-size: 40px;
+    }
     .col1, .col2{
         width: 100%;
     }
 
     .contact .row{
         padding: 0;
+    }
+
+    .contact .row h2{
+        font-size: 30px;
+    }
+    .contact .row h3{
+        font-size: 20px;
+    }
+
+    .col1 i{
+        font-size: 20px;
     }
 }

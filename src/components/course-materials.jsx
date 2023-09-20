@@ -4,8 +4,8 @@ import {ref, listAll} from 'firebase/storage'
 import {useEffect, useState } from 'react'
 import GenerateFiles from './generateFiles'
 import GenerateVideos from './generateVideos'
-import empty from "../images/empty.png"
 import "../styles/courses.css"
+import Empty from "./empty";
 
 
 const CourseMaterials = () => {
@@ -54,9 +54,7 @@ const CourseMaterials = () => {
                 //no files or videos
                 !getFiles.length && 
                 !getVideos.length &&
-                <div className="empty">
-                    <img src={empty} alt="" />
-                </div>
+                <Empty />
             }
 
             {/* course contents */}

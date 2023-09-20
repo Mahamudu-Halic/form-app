@@ -79,5 +79,7 @@ button.activate{
 }
 
 @media screen and (max-width: 700px) {
-    
+    .upload-home h2{
+        font-size: 40px;
+    }
 } 

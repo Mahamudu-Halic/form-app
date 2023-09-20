@@ -16,7 +16,7 @@ const Overview = () => {
             <section className="welcome">
                 <div className="overlay"></div>
                 <div className="welcome-msg">
-                    <h1>Welcome to learn hub</h1>
+                    <h1>Welcome to ShareSync</h1>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor numquam voluptatum totam a! Laboriosam, expedita porro temporibus corporis explicabo illum nostrum, omnis officia, sit distinctio exercitationem labore! Laudantium, mollitia repellendus.</p>
                 </div>
             </section>

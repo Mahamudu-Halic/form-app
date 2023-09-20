@@ -25,7 +25,7 @@ const Sign = ({children}) => {
         <div className="sign">
             <Theme />
             <div className="hero">
-                <h1>welcome to LearnHub</h1>
+                <h1>welcome to ShareSync</h1>
                 <div className="mediaLogin">
                     <button onClick={handleGoogleClick}>
                         <i className="fa-brands fa-google"></i>Continue with Google</button>

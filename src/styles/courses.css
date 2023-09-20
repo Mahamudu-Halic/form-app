@@ -98,14 +98,7 @@
     gap: 20px;
 }
 
-.empty{
-    /* width: 100%; */
-    margin: auto;
-}
 
-.empty img{
-    width: 300px;
-}
 
 .courses .back-link{
     position: fixed;

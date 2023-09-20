@@ -2,12 +2,12 @@ import '../styles/footer.css'
 const Footer = () => {
     return(
         <footer>
-            <h2>Learn<span>Hub</span></h2>
+            <h2>Share<span>Sync</span></h2>
             <div className="footer">
                 <div className="footer-info">
                     <div className="footer-about">
                         <h3>about us</h3>
-                        <p>LearnHub is an online learning platform for undergraduate students, providing personalized educational materials and fostering a collaborative community.</p>
+                        <p>ShareSync is an online learning platform for undergraduate students, providing personalized educational materials and fostering a collaborative community.</p>
                     </div>
 
                     <div className="footer-contact">
