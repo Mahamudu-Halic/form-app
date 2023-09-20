@@ -18,7 +18,7 @@ const Chat = () => {
     const [create, setCreate] = useState(false)
     const [searchField, setSearchField] = useState('')
     const [filteredTopics, setFilteredTopics] = useState(topic)
-    const [showDashboard, setShowDashboard] = useState(true)
+    const [showDashboard, setShowDashboard] = useState(false)
 
     //show dashboard
     const handleShowDashboard = () => {
@@ -152,12 +152,11 @@ const Chat = () => {
             
             <div className="chat-community" style={isLight ? {background: "#F2F4F6"} : {background: "#272821"}}>
                 <div className={`${showDashboard && "overlay"}`}></div>
-                    <div className="arrow">
-                        <button onClick={handleShowDashboard}>
+                <div className="arrow">
+                    <button onClick={handleShowDashboard}>
                         <i className={`fa-solid ${showDashboard ? "fa-chevron-left" : "fa-chevron-right"}`}></i>
-
-                        </button>
-                    </div>
+                    </button>
+                </div>
                 <div className={`chat-dashbord ${showDashboard && "show-dashboard"}`}>
                     <div className={`topic-name ${create && "add"}`}>
                         <button onClick={handleCreate}><i className="fa-solid fa-close"></i></button>
