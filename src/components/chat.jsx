@@ -8,11 +8,14 @@ import { useRef } from "react";
 import Empty from "./empty";
 import { arrayUnion, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "../utils/firebase.utils";
+import { useClerk } from "@clerk/clerk-react";
 
 var chatRef
 const Chat = () => {
+
     const docRef = doc(db, "chats", "topics")
     const date = new Date()
+    const [topicHeading, setTopicHeading] = useState("")
     const [messages, setMessages] = useState([])
     const [topic, setTopic] = useState([])
     const {isLight} = useContext(Context)
@@ -20,7 +23,7 @@ const Chat = () => {
     const [searchField, setSearchField] = useState('')
     const [filteredTopics, setFilteredTopics] = useState(topic)
     const [showDashboard, setShowDashboard] = useState(false)
-
+    const {user} = useClerk()
     //show dashboard
     const handleShowDashboard = () => {
         setShowDashboard(!showDashboard)
@@ -36,7 +39,7 @@ const Chat = () => {
                 }
                 else{ 
                     await setDoc((docRef), {
-                        topic: ["what is html?"]
+                        topic: []
                     })
                 }
             } catch (error) {
@@ -52,7 +55,7 @@ const Chat = () => {
     const getChat = async (chat) => {
         chatRef = doc(db, "chats", chat)
         const docSnap = await getDoc(chatRef)
-
+        setTopicHeading(chat)
         try {
             if(docSnap.exists()){
                 setMessages(docSnap.data().chats)
@@ -89,12 +92,14 @@ const Chat = () => {
             
             setMessages(prev => [...prev, {
                 message: e.target[0].value,
-                time: date.toDateString()
+                time: date.toDateString(),
+                profile: user.profileImageUrl
             }])
             await updateDoc(chatRef, {
                 chats: arrayUnion({
                     message: e.target[0].value,
-                    time: date.toDateString()
+                    time: date.toDateString(),
+                    profile: user.profileImageUrl
                 })
             })
         } catch (error) {
@@ -175,6 +180,7 @@ const Chat = () => {
 
                     <div className="topics">
                         {
+                            //show topics
                             filteredTopics.map(topic => (
                                 <button onClick={() => getChat(topic)}>{topic}</button>
                             ))
@@ -182,17 +188,28 @@ const Chat = () => {
                     </div>
                 </div>
                 <div className="chatbox">
+                    {
+                        topicHeading.length !== 0 ? 
+                        <div className="topic-heading">
+                            <h2>{topicHeading}</h2>
+                        </div>
+                        : <div className="overlay"></div>
+                    }
                     <div
                         ref={scrollContainerRef}
                         className="chat-messages">
                         {
-                        //no files or videos
+                        //if message is empty
                             messages.length === 0 &&
                             <Empty />
                         }
                         {
+                            //show messages
                             messages.map(message => (
-                                <div className="border">
+                                <div className="user-chat">
+                                    <div className="user-profile">
+                                        <img src={message.profile} alt="" />
+                                    </div>
                                     <div className="message">
                                         <p className="message-txt">{message.message}</p>
                                         <p className="time">{message.time}</p>

@@ -24,6 +24,7 @@ const Contact = () => {
             })
             .then(() => {
                 setTimeout(() => {
+                    form.current.reset()
                     setSent(false)
                 }, 3000);
             })

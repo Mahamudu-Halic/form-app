@@ -1,11 +1,14 @@
 import { Helmet } from "react-helmet";
-import welcomeImage from "../images/welcome.png"
 import vision from "../images/our-vision.jpg"
 import process from "../images/our-process.jpg"
 import approach from "../images/our-approach.jpg"
 import "../styles/overview.css"
+import { useClerk } from "@clerk/clerk-react";
 
 const Overview = () => {
+    const {user} = useClerk()
+
+    console.log(user)
     return ( 
         <div className="overview">
              <Helmet>

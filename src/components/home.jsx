@@ -12,11 +12,6 @@ import Footer from "./footer";
 import CourseMaterials from "./course-materials";
 import Profile from "./profile";
 
-function BlogPost() {
-    let { param } = useParams();
-    return <div>Now showing post {param}</div>;
-  }  
-
 const HomePage = () => {
     const {theme, isLight} = useContext(Context)
     return ( 
