@@ -29,27 +29,29 @@ const Chat = () => {
         setShowDashboard(!showDashboard)
     }
     //get topics
-    useEffect(() => {
-        const getTopics = async () => {
-            const docRef = doc(db, "chats", "topics")
-            const docSnap = await getDoc(docRef)
-            try {
-                if(docSnap.exists()){
-                    setTopic(docSnap.data().topic)
-                }
-                else{ 
-                    await setDoc((docRef), {
-                        topic: []
-                    })
-                }
-            } catch (error) {
-                console.log(error)
+    const getTopics = async () => {
+        const docRef = doc(db, "chats", "topics")
+        const docSnap = await getDoc(docRef)
+        try {
+            if(docSnap.exists()){
+                setTopic(docSnap.data().topic)
             }
+            else{ 
+                await setDoc((docRef), {
+                    topic: []
+                })
+            }
+        } catch (error) {
+            console.log(error)
         }
-
+    }
+    useEffect(() => {
         return () => {getTopics()}
-
     }, [])
+
+    setInterval(() => {
+        getTopics()
+    }, 3000);
 
 //get chat
     const getChat = async (chat) => {
@@ -90,11 +92,6 @@ const Chat = () => {
         e.preventDefault()
         try {
             
-            setMessages(prev => [...prev, {
-                message: e.target[0].value,
-                time: date.toDateString(),
-                profile: user.profileImageUrl
-            }])
             await updateDoc(chatRef, {
                 chats: arrayUnion({
                     message: e.target[0].value,
@@ -102,6 +99,11 @@ const Chat = () => {
                     profile: user.profileImageUrl
                 })
             })
+            setMessages(prev => [...prev, {
+                message: e.target[0].value,
+                time: date.toDateString(),
+                profile: user.profileImageUrl
+            }])
         } catch (error) {
             console.log(error)
         }
