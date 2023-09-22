@@ -210,7 +210,7 @@ button{
 }
 
 .chat-community .overlay{
-    /* display: none; */
+    display: none;
 }
 
 .user-chat{

@@ -10,7 +10,7 @@ import { arrayUnion, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "../utils/firebase.utils";
 import { useClerk } from "@clerk/clerk-react";
 
-var chatRef
+var chatRef, currentChat
 const Chat = () => {
 
     const docRef = doc(db, "chats", "topics")
@@ -55,6 +55,7 @@ const Chat = () => {
 
 //get chat
     const getChat = async (chat) => {
+        currentChat = chat
         chatRef = doc(db, "chats", chat)
         const docSnap = await getDoc(chatRef)
         setTopicHeading(chat)
@@ -99,17 +100,19 @@ const Chat = () => {
                     profile: user.profileImageUrl
                 })
             })
-            setMessages(prev => [...prev, {
-                message: e.target[0].value,
-                time: date.toDateString(),
-                profile: user.profileImageUrl
-            }])
+            .then(() => {
+                e.target[0].value = "";
+                getChat(currentChat)
+            })
+            // setMessages(prev => [...prev, {
+            //     message: e.target[0].value,
+            //     time: date.toDateString(),
+            //     profile: user.profileImageUrl
+            // }])
         } catch (error) {
             console.log(error)
         }
-        setTimeout(() => {
-            e.target[0].value = "";
-        }, 1000);
+
     }
 
     //create new topic popup
@@ -127,13 +130,13 @@ const Chat = () => {
             await updateDoc(docRef, {
                 topic: arrayUnion(e.target[0].value)
             })
-            .then(()=>getTopics())
+            .then(()=>{
+                e.target[0].value = "";
+                getTopics()
+            })
         } catch (error) {
             console.log(error)
         }
-        setTimeout(() => {
-            e.target[0].value = "";
-        }, 1000);
     }
 
     const scrollContainerRef = useRef(null);
@@ -192,11 +195,11 @@ const Chat = () => {
                 </div>
                 <div className="chatbox">
                     {
-                        topicHeading.length !== 0 ? 
+                        topicHeading.length !== 0 &&
                         <div className="topic-heading">
                             <h2>{topicHeading}</h2>
                         </div>
-                        : <div className="overlay"></div>
+                        // : <div className="overlay"></div>
                     }
                     <div
                         ref={scrollContainerRef}
