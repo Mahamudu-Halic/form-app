@@ -29,7 +29,7 @@ const HomePage = () => {
                         <Route path="/courses/:param" element={<CourseMaterials />} />
                     </Routes>
 
-                    <Footer />
+                    {/* <Footer /> */}
                     
                 </div>
             </div>
