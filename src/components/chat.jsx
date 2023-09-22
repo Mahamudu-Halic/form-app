@@ -49,7 +49,7 @@ const Chat = () => {
         return () => {getTopics()}
     }, [])
 
-    setInterval(() => {
+    setTimeout(() => {
         getTopics()
     }, 3000);
 
@@ -127,6 +127,7 @@ const Chat = () => {
             await updateDoc(docRef, {
                 topic: arrayUnion(e.target[0].value)
             })
+            .then(()=>getTopics())
         } catch (error) {
             console.log(error)
         }
