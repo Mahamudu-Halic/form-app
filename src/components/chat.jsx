@@ -10,11 +10,12 @@ import { arrayUnion, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "../utils/firebase.utils";
 import { useClerk } from "@clerk/clerk-react";
 
-var chatRef, currentChat
+var chatRef
 const Chat = () => {
 
     const docRef = doc(db, "chats", "topics")
     const date = new Date()
+    const [currentChat, setCurrentChat] = useState()
     const [topicHeading, setTopicHeading] = useState("")
     const [messages, setMessages] = useState([])
     const [topic, setTopic] = useState([])
@@ -55,8 +56,8 @@ const Chat = () => {
 
 //get chat
     const getChat = async (chat) => {
-        currentChat = chat
         chatRef = doc(db, "chats", chat)
+        setCurrentChat(chat)
         const docSnap = await getDoc(chatRef)
         setTopicHeading(chat)
         try {
@@ -68,7 +69,7 @@ const Chat = () => {
                     chats: []
                 })
             }
-            handleShowDashboard()
+            setShowDashboard(false)
         } catch (error) {
             console.log(error)
         }
