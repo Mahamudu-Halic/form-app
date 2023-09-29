@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { ref, uploadBytesResumable } from "firebase/storage"
 import { useContext } from "react"
 import upload from '../images/upload1.svg'
@@ -18,7 +18,7 @@ const Upload = () => {
     const [college, setCollege] = useState('')
     const [success, setSuccess] = useState(false)
     const [uploading, setUploading] = useState(false)
-
+    const formRef = useRef()
     // handleChange
     const handleChange = e => {
         setSuccess(false)
@@ -47,8 +47,9 @@ const Upload = () => {
                 setUploading(false)
                 setSuccess(true)
                 setFiles([])
-                setCollege("")
                 setTimeout(() => {
+                    formRef.current.reset()
+                    setCollege("")
                     setSuccess(false)
                 }, 3000);
             }
@@ -101,7 +102,7 @@ const Upload = () => {
             </div> */}
 
             <div className="form" style={isLight ? {background: "#fff"} : {background: "#232323"}}>
-                <form action="#" onSubmit={handleSubmit}>
+                <form action="#" ref={formRef}onSubmit={handleSubmit}>
                     <div className="form-group">
                         <div className="file-names">
                             {
@@ -114,7 +115,7 @@ const Upload = () => {
                     </div>
 
                     <div className="select-course">
-                        <select className="form-group" name="" id="" onChange={handleCollegeSelect} value={college}>
+                        <select className="form-group" name="" id="" onChange={handleCollegeSelect}>
                             <option value="">Select college</option>
                             <option value='0'>College of Science</option>
                             <option value="1">College of Engineering</option>
