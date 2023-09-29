@@ -1,0 +1,96 @@
+.download-file{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.download-file .image{
+    width: 100px;
+}
+
+.download-file .image img{
+    width: 100%;
+}
+
+.links{
+    display: flex;
+    gap: 10px;
+}
+
+.links .download{
+    background-color: #22ac29;
+}
+
+.links a{
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    background-color: #f04a13;
+    /* width: fit-content; */
+    text-transform: capitalize;
+    color: #fff;
+    border: solid 1px;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment-img{
+    width: 40px;
+}
+
+.comment-img img{
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.display-comments{
+    border: solid 1px #808080;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comment-msg{
+    display: flex;
+    gap: 10px;
+}
+
+.name{
+    font-size: 13px;
+    color: #808080;
+}
+
+.comments form{
+    display: flex;
+    width: 500px;
+    gap: 10px;
+}
+
+.comments form input{
+    width: 100%;
+    padding: 10px;
+    border: solid 1px #808080;
+    border-radius: 5px;
+    outline-color: blue;
+}
+
+.comments form button{
+    padding: 10px;
+    background: #2c8a30;
+    border-color: #2c8a30;
+}
+
+@media screen and (max-width: 700px) {
+    .comments form{
+        width: 100%;
+    }
+}

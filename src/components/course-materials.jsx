@@ -13,7 +13,6 @@ const CourseMaterials = () => {
     const [getVideos, setGetVideos] = useState([])
     const [isActive, setIsActive] = useState("1")
     const {param} = useParams()
-    console.log(param)
     useEffect(() => {
         try {
             //fetch files from firebase
@@ -65,6 +64,7 @@ const CourseMaterials = () => {
                     getFiles.map((content, i) =>{
                         return(
                             <GenerateFiles 
+                            year={isActive}
                             key={i}
                             content={content}
                             />

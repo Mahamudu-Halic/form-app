@@ -7,12 +7,12 @@ import { storage } from "../utils/firebase.utils"
 import { Context } from "./context.provider"
 import { Helmet } from "react-helmet"
 
-var fileName = ''
+var fileName = ""
 const Upload = () => {
     //useContext
     const {courseList, isLight} = useContext(Context)
     //useState
-    const [file, setFile] = useState('')
+    const [files, setFiles] = useState([])
     const [year, setYear] = useState('select year')
     const [course, setCourse] = useState('select course')
     const [college, setCollege] = useState('')
@@ -25,8 +25,7 @@ const Upload = () => {
         try{
             if(e.target.files){
                 fileName = e.target.files[0].name
-                setFile(e.target.files[0])
-
+                setFiles([...e.target.files])
             }
         }
         catch(err){
@@ -36,29 +35,31 @@ const Upload = () => {
 
     //handleUpload
     const handleUpload = async folder => {
+        let count = 0;
         const storageRef = ref(storage, `courses/${course}/year/${year}/${folder}`)
-        const fileRef = ref(storageRef, file.name)
-        await uploadBytesResumable(fileRef, file)
-        .then(() => {
-            fileName = ''
-            setUploading(false)
-            setSuccess(true)
-            setFile('')
-            setCollege("")
+        files.forEach(async file => {
+            const fileRef = ref(storageRef, file.name)
+            await uploadBytesResumable(fileRef, file)
+            count++
+
+            if(count === files.length){
+                fileName = ''
+                setUploading(false)
+                setSuccess(true)
+                setFiles([])
+                setCollege("")
+                setTimeout(() => {
+                    setSuccess(false)
+                }, 3000);
+            }
         })
-        .then(()=>{
-            setTimeout(() => {
-                setSuccess(false)
-            }, 3000);
-        })
-        .catch(err => console.log('upload', err))
     }
 
     //handleSubmit
     const handleSubmit = async e => {
         e.preventDefault()
         try{
-            if(course !== 'select course' && year !== 'select year' && file){
+            if(course !== 'select course' && year !== 'select year' && files.length != 0){
                 setUploading(true)
                 if(fileName.includes('.doc') || fileName.includes('.ppt') || fileName.includes('.pdf')){
                     return handleUpload('files')
@@ -102,8 +103,14 @@ const Upload = () => {
             <div className="form" style={isLight ? {background: "#fff"} : {background: "#232323"}}>
                 <form action="#" onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <label htmlFor="file">{fileName}</label>
-                        <input type="file" onChange={handleChange} id="file" required/>
+                        <div className="file-names">
+                            {
+                                files.map(file => (
+                                    <label htmlFor="">{file.name}</label>
+                                ))
+                            }
+                        </div>
+                        <input type="file" multiple onChange={handleChange} id="file" required/>
                     </div>
 
                     <div className="select-course">

@@ -11,6 +11,7 @@ import { Context } from "./context.provider";
 import Footer from "./footer";
 import CourseMaterials from "./course-materials";
 import Profile from "./profile";
+import DownloadFile from "./download-file";
 
 const HomePage = () => {
     const {theme, isLight} = useContext(Context)
@@ -27,6 +28,7 @@ const HomePage = () => {
                         <Route path="/chat" element={<Chat/>} />
                         <Route path="/contact" element={<Contact/>} />
                         <Route path="/courses/:param" element={<CourseMaterials />} />
+                        <Route path="/courses/:param/:year/:route" element={<DownloadFile />} />
                     </Routes>
 
                     {/* <Footer /> */}

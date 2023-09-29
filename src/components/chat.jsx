@@ -98,7 +98,8 @@ const Chat = () => {
                 chats: arrayUnion({
                     message: e.target[0].value,
                     time: date.toDateString(),
-                    profile: user.profileImageUrl
+                    profile: user.profileImageUrl,
+                    name: user.fullName
                 })
             })
             .then(() => {
@@ -218,6 +219,7 @@ const Chat = () => {
                                         <img src={message.profile} alt="" />
                                     </div>
                                     <div className="message">
+                                        <p className="name">{message.name}</p>
                                         <p className="message-txt">{message.message}</p>
                                         <p className="time">{message.time}</p>
                                     </div>
