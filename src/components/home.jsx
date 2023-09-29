@@ -31,7 +31,7 @@ const HomePage = () => {
                         <Route path="/courses/:param/:year/:route" element={<DownloadFile />} />
                     </Routes>
 
-                    {/* <Footer /> */}
+                    <Footer />
                     
                 </div>
             </div>
