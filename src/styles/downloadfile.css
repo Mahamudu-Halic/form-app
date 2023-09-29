@@ -62,8 +62,18 @@
 .comment-msg{
     display: flex;
     gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #77767673;
 }
 
+.comment-msg:last-child{
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.msg-container{
+    width: 100%;
+}
 .name{
     font-size: 13px;
     color: #808080;

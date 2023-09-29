@@ -111,7 +111,7 @@ const DownloadFile = () => {
                                 <div className="comment-img">
                                     <img src={comment.profile} alt="" />
                                 </div>
-                                <div>
+                                <div className="msg-container">
                                     <p className="name">{comment.name}</p>
                                     <p>{comment.msg}</p>
                                     <p className="time">{comment.time}</p>
