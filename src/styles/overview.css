@@ -178,6 +178,10 @@ img{
     font-size: 50px;
     color: #fff;
   }
+
+  .welcome-msg p{
+    font-size: 13px;
+  }
   
   .content h3{
     font-size: 25px;

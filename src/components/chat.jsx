@@ -23,7 +23,7 @@ const Chat = () => {
     const [create, setCreate] = useState(false)
     const [searchField, setSearchField] = useState('')
     const [filteredTopics, setFilteredTopics] = useState(topic)
-    const [showDashboard, setShowDashboard] = useState(false)
+    const [showDashboard, setShowDashboard] = useState(true)
     const {user} = useClerk()
     //show dashboard
     const handleShowDashboard = () => {
@@ -52,7 +52,7 @@ const Chat = () => {
 
     setTimeout(() => {
         getTopics()
-    }, 3000);
+    }, 1000);
 
 //get chat
     const getChat = async (chat) => {
@@ -106,11 +106,6 @@ const Chat = () => {
                 e.target[0].value = "";
                 getChat(currentChat)
             })
-            // setMessages(prev => [...prev, {
-            //     message: e.target[0].value,
-            //     time: date.toDateString(),
-            //     profile: user.profileImageUrl
-            // }])
         } catch (error) {
             console.log(error)
         }
@@ -127,7 +122,7 @@ const Chat = () => {
         e.preventDefault()
         
         try {
-            setTopic(prev => [...prev, e.target[0].value])
+            // setTopic(prev => [...prev, e.target[0].value])
             setCreate(!create)
             await updateDoc(docRef, {
                 topic: arrayUnion(e.target[0].value)
@@ -163,7 +158,7 @@ const Chat = () => {
                 <title>Chat</title>
             </Helmet>
             
-            <div className="chat-community" style={isLight ? {background: "#F2F4F6"} : {background: "#272821"}}>
+            <div className="chat-community" style={isLight ? {background: "#F2F4F6"} : {background: "#121212"}}>
                 <div className={`${showDashboard && "overlay"}`} onClick={handleShowDashboard}></div>
                 <div className="arrow">
                     <button onClick={handleShowDashboard}>
@@ -183,7 +178,7 @@ const Chat = () => {
                         <button title="create new topic" onClick={handleCreate}><i className="fa-solid fa-edit"></i></button>
                     </div>
                     <div className="searchbar">
-                        <input type="text" name="" id="" placeholder="search" onChange={handleChange}/>
+                        <input type="search" name="" id="" placeholder="search" onChange={handleChange}/>
                     </div>
 
                     <div className="topics">

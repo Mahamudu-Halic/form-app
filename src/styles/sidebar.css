@@ -37,19 +37,20 @@
 
 @media screen and (max-width: 700px){
     .items{
-        background: #372e2e;
+        background: #3c3535;
         position: fixed;
         z-index: 200;
         height: 100%;
         top: 50px;
-        left: -200px;
+        /* left: -200px; */
+        right: -200px;
         transition: 0.3s ease;
         padding-top: 20px;
         overflow: auto;
     }
 
     .active{
-        left: 0;
+        right: 0;
     }
 
     .hamburger{
@@ -63,7 +64,7 @@
         position: fixed;
         z-index: 200;
         cursor: pointer;
-        left: 20px;
+        right: 20px;
         top: 80px;
     }
 
@@ -78,7 +79,8 @@
         padding: 5px 10px;
         border: solid 1px #797474;
         border-radius: 10px;
-        margin: 5px 5px 0 auto;
+        /* margin: 5px 5px 0 auto; */
+        margin: auto;
         color: #797474;
     }
 }

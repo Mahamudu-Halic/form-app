@@ -8,7 +8,6 @@ import { useClerk } from "@clerk/clerk-react";
 const Overview = () => {
     const {user} = useClerk()
 
-    console.log(user)
     return ( 
         <div className="overview">
              <Helmet>

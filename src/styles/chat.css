@@ -16,23 +16,26 @@
     flex-direction: column;
     gap: 20px;
     border-right: solid 1px;
-    background-color: #008080;
+    background-color: #ad4906;
     position: relative;
-    z-index: 50;
+    z-index: 10;
 }
 
 .topic-name{
     position: absolute;
-    background-color: #292828c5;
+    background-color: #211818d3;
     height: 100%;
     width: 100%;
     left: 0;
+    right: 0;
     top: 0;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    padding-top: 30px;
     display: none;
     gap: 10px;
+    z-index: 50;
 }
 
 .topic-name form{
@@ -43,8 +46,10 @@
 }
 
 .topic-name form button{
-    background: gray;
+
+    text-transform: capitalize;
     font-weight: normal;
+    letter-spacing: 2px;
 }
 
 div.add{
@@ -54,7 +59,7 @@ div.add{
 .chat-dashbord .topic-name input{
     padding: 15px;
     border-color: grey;
-    box-shadow: 0 2px 5px 0 grey;
+    
 }
 
 .chat-navbar{
@@ -76,14 +81,11 @@ div.add{
 }
 
 .topics{
-    border-top: solid 1px;
+    border-top: solid 1px gray;
     height: 100vh;
     overflow: auto;
     display: flex;
     flex-direction: column;
-    /* gap: 20px; */
-    /* border-radius: 10px; */
-    border-bottom: solid 1px;
 }
 
 button{
@@ -120,8 +122,6 @@ button{
     border-radius: 5px;
     outline-color: #2864E6;
 }
-
-
 
 .chatbox{
     padding: 20px;
@@ -177,19 +177,6 @@ button{
     position: relative;
 }
 
-/* .message::before {
-    content: "";
-    position: absolute;
-    
-    background-color: transparent;
-    top: 25px;
-    left: -10px;
-    height: 20px;
-    width: 20px;
-    border-bottom-left-radius: 25px;
-    box-shadow: 0 -25px 0 0 #2864E6;
-} */
-
 .time{
     font-size: 10px;
     text-align: right;
@@ -200,13 +187,17 @@ button{
     position: absolute;
     top: 40%;
     left: 5px;
-    z-index: 100;
-    /* color: #fff; */
+    z-index: 20;
     display: none;
 }
 
 .arrow button{
+    color: #fff;
+    background-color: #ad4906;
     padding: 5px;
+    height: 50px;
+    border: solid 1px;
+    border-radius: 5px;
 }
 
 .chat-community .overlay{
@@ -215,7 +206,7 @@ button{
 
 .user-chat{
     display: flex;
-    gap: 20px;
+    gap: 10px;
     border-left: solid 1px gray;
     padding-left: 10px;
     position: relative;
@@ -277,7 +268,7 @@ button{
         position: absolute;
         left: -300px;
         transition: 0.3s ease-in-out;
-        box-shadow: 2px 0 2px 1px #008080;
+        /* box-shadow: 2px 0 2px 1px #008080; */
     }
 
     .chat-community div.show-dashboard{

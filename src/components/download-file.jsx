@@ -97,7 +97,7 @@ const DownloadFile = () => {
                     <button><i className="fa-solid fa-paper-plane"></i></button>
                 </form>
 
-                <h3>Reviews</h3>
+                <h3>Reviews : <span>{comments.length}</span></h3>
                 <div className="display-comments">
                         {
                         //if message is empty

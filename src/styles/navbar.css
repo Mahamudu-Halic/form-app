@@ -15,3 +15,9 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: 700px) {
+    .navbar h1{
+        font-size: 20px;
+    }
+}

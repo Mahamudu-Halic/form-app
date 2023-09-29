@@ -22,7 +22,7 @@
     background-color: gray;
     display: flex;
     flex-direction: column;
-    width: 130px;
+    width: 100px;
     position: absolute;
     top: 70px;
     border-radius: 5px;
