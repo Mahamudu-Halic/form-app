@@ -1,9 +1,10 @@
 
 .chat{
     padding: 0 20px;
-    height: 90vh;
-    /* height: 100%; */
-    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 90vh;
 }
 .chat-community{
     display: flex;
@@ -15,23 +16,11 @@
 
 .chat-dashbord{
     padding: 20px 10px 20px 20px;
-    /* height: 80vh; */
     display: flex;
     flex-direction: column;
     gap: 20px;
-    /* border-right: solid 1px; */
     position: relative;
     z-index: 10;
-}
-
-.dashboard-dark{
-    background-color: #1d1d1d;
-}
-
-.dashboard-light{
-    background-color: #dad4d4;
-    color: #000;
-
 }
 
 .topic-name{
@@ -43,7 +32,6 @@
     right: 0;
     top: 0;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     padding-top: 30px;
     display: none;
@@ -98,7 +86,6 @@ div.add{
 
 .topics{
     border-top: solid 1px gray;
-    height: 100vh;
     overflow: auto;
     display: flex;
     flex-direction: column;
@@ -135,7 +122,6 @@ button{
 .chat-dashbord input{
     padding: 10px;
     border: none;
-    /* border-bottom: solid 1px #1b1a1a; */
     background-color: #191919;
     border-radius: 5px;
     outline-color: #2864E6;
@@ -144,7 +130,6 @@ button{
 
 .chatbox{
     padding: 20px;
-    /* height: 80vh; */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -164,10 +149,9 @@ button{
 }
 
 .message{
-        min-width: 200px;
+    min-width: 200px;
     width: fit-content;
     padding: 10px;
-    /* margin-left: 10px; */
     border-radius: 5px;
     position: relative;
     
@@ -194,17 +178,12 @@ button{
 }
 
 .entry-field button{
-    /* border: none; */
     border-radius: 10px;
     padding: 15px;
     cursor: pointer;
     background: #ae5312;
     border: solid 1px;
     color: #c0bdbd;
-}
-
-.entry-field button:hover{
-    /* background: #c0bdbd; */
 }
 
 .message .name{
@@ -248,8 +227,6 @@ button{
     border-left: solid 1px gray;
     padding-left: 10px;
     position: relative;
-    
-    /* align-items: center; */
 }
 
 .user-chat:last-child{
@@ -297,11 +274,9 @@ button{
 
 @media screen and (max-width: 700px) {
     .chat{
-        height: 92vh;
+        min-height: 92vh;
     }
-    .chat-community{
-        border-radius: 0;
-    }
+    
     .chat-community .overlay{
         display: block;
         transition: 0.3s ease-in-out;
@@ -313,9 +288,9 @@ button{
     .chat-dashbord{
         border: none;
         position: absolute;
+        height: 100%;
         left: -300px;
         transition: 0.3s ease-in-out;
-        /* box-shadow: 2px 0 2px 1px #008080; */
     }
 
     .chat-community div.show-dashboard{
