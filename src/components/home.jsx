@@ -12,11 +12,13 @@ import Footer from "./footer";
 import CourseMaterials from "./course-materials";
 import Profile from "./profile";
 import DownloadFile from "./download-file";
+import Quiz from "./quiz";
 
 const HomePage = () => {
     const {theme, isLight} = useContext(Context)
     return ( 
-        <div className="home" style={isLight? {background: theme.light.background, color: theme.light.color} : {background: theme.dark.background, color: theme.dark.color}}>            <Navbar />
+        <div className="home" style={isLight? {background: theme.light.background, color: theme.light.color} : {background: theme.dark.background, color: theme.dark.color}}>            
+            <Navbar />
             <div className="align">
                 <SideBar />
                 <div className="routes">
@@ -27,12 +29,10 @@ const HomePage = () => {
                         <Route path="/profile" element={<Profile/>} />
                         <Route path="/chat" element={<Chat/>} />
                         <Route path="/contact" element={<Contact/>} />
+                        <Route path="/quiz" element={<Quiz/>} />
                         <Route path="/courses/:param" element={<CourseMaterials />} />
                         <Route path="/courses/:param/:year/:route" element={<DownloadFile />} />
                     </Routes>
-
-                    <Footer />
-                    
                 </div>
             </div>
         </div>

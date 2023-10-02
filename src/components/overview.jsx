@@ -4,6 +4,7 @@ import process from "../images/our-process.jpg"
 import approach from "../images/our-approach.jpg"
 import "../styles/overview.css"
 import { useClerk } from "@clerk/clerk-react";
+import Footer from "./footer";
 
 const Overview = () => {
     const {user} = useClerk()
@@ -93,6 +94,7 @@ const Overview = () => {
                     </div>
                 </div>
             </section>
+            <Footer />
         </div>
      );
 }

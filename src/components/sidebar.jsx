@@ -30,6 +30,11 @@ const SideBar = () => {
             link: "chat",
         },
         {
+            icon: "fa-solid fa-book-open",
+            title: "quiz",
+            link: "quiz",
+        },
+        {
             icon: "fa-solid fa-headset",
             title: "contact",
             link: "contact",

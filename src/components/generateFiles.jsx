@@ -2,8 +2,6 @@ import word from '../images/word.png'
 import pdf from '../images/pdf.png'
 import powerpoint from '../images/powerpoint.png'
 import "../styles/courses.css"
-import Comment from './comment'
-import Rating from './rating'
 import { Link } from 'react-router-dom'
 // import Comment from './comment'
 
@@ -21,7 +19,9 @@ const GenerateFiles = props => {
                     </div>
                     <p>{content.name}</p>
                 </div>
-                <Comment />
+                <div className="comment">
+                    <i className="fa-regular fa-comments"></i>
+                </div>
             </Link>
             {/* </a> */}
 

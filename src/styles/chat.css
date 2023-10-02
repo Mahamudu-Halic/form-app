@@ -1,29 +1,39 @@
 
 
 .chat-community{
-    margin: 20px;
+    margin: 0 20px;
     display: flex;
     /* padding: 20px; */
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    height: 90vh;
 }
 
 .chat-dashbord{
     padding: 20px 10px 20px 20px;
-    height: 80vh;
+    /* height: 80vh; */
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border-right: solid 1px;
-    background-color: #ad4906;
+    /* border-right: solid 1px; */
     position: relative;
     z-index: 10;
 }
 
+.dashboard-dark{
+    background-color: #1d1d1d;
+}
+
+.dashboard-light{
+    background-color: #dad4d4;
+    color: #000;
+
+}
+
 .topic-name{
     position: absolute;
-    background-color: #211818d3;
+    background-color: #000000bb;
     height: 100%;
     width: 100%;
     left: 0;
@@ -43,6 +53,11 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
+}
+
+.topic-name form input{
+    background-color: #fff;
+    color: #121212;
 }
 
 .topic-name form button{
@@ -65,12 +80,10 @@ div.add{
 .chat-navbar{
     display: flex;
     justify-content: space-between;
-    color: #fff;
 }
 
 .chat-navbar button, .topic-name button{
     background: none;
-    color: #fff;
     border: solid 1px grey;
     padding: 10px;
     border-radius: 5px;
@@ -99,7 +112,7 @@ button{
     text-align: left;
     padding: 15px 10px;
     transition: 0.3s ease;
-    color: #fff;
+    border-radius: 5px;
 }
 
 .topics button:hover{
@@ -117,21 +130,25 @@ button{
 }
 
 .chat-dashbord input{
-    padding: 5px;
-    border: solid 1px;
+    padding: 10px;
+    border: none;
+    /* border-bottom: solid 1px #1b1a1a; */
+    background-color: #191919;
     border-radius: 5px;
     outline-color: #2864E6;
+    color: #fff;
 }
 
 .chatbox{
     padding: 20px;
-    height: 80vh;
+    /* height: 80vh; */
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border-radius: 0 10px 10px 0;
+
     width: 100%;
     position: relative;
+
 }
 
 .chat-messages{
@@ -141,8 +158,20 @@ button{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    border-bottom: solid 1px;
+    border-bottom: solid 1px #423f3f;
 }
+
+.message{
+        min-width: 200px;
+    width: fit-content;
+    padding: 10px;
+    /* margin-left: 10px; */
+    border-radius: 5px;
+    position: relative;
+    
+}
+
+
 
 .entry-field{
     margin-top: auto;
@@ -153,28 +182,35 @@ button{
 
 .entry-field input{
     width: 100%;
-    padding: 10px;
+    padding: 15px 10px;
     outline-color: blue;
-    border: solid 1px;
+    border: none;
     border-radius: 5px;
+    background-color: #1d1d1d;
+    color: #fff;
+    font-size: 16px;
 }
 
 .entry-field button{
-    border: solid 1px;
-    border-radius: 5px;
-    padding: 10px;
+    /* border: none; */
+    border-radius: 10px;
+    padding: 15px;
     cursor: pointer;
+    background: #ae5312;
+    border: solid 1px;
+    color: #c0bdbd;
 }
 
-.message{
-    background-color: #1c1d23;
-    color: #fff;
-    min-width: 200px;
-    width: fit-content;
-    padding: 10px;
-    /* margin-left: 10px; */
-    border-radius: 5px;
-    position: relative;
+.entry-field button:hover{
+    /* background: #c0bdbd; */
+}
+
+.message .name{
+    font-size: 12px;
+}
+
+.message .message-txt{
+    font-size: 14px;
 }
 
 .time{
@@ -210,7 +246,12 @@ button{
     border-left: solid 1px gray;
     padding-left: 10px;
     position: relative;
+    
     /* align-items: center; */
+}
+
+.user-chat:last-child{
+    margin-bottom: 20px;
 }
 
 .user-chat::before{
@@ -221,7 +262,7 @@ button{
     height: 15px;
     width: 15px;
     background-color: #5f5959;
-    border: solid 1px;
+    border: solid 1px #5f5959;
     border-radius: 50%;
 }
 .user-chat:last-child::after{
@@ -231,9 +272,9 @@ button{
     left: -9px;
     height: 15px;
     width: 15px;
-    background-color: #1c1a1a;
-    border: solid 1px;
+    background: none;
     border-radius: 50%;
+    border: solid 1px #5f5959;
 }
 
 .user-profile{
@@ -248,11 +289,15 @@ button{
 }
 
 .topic-heading{
-    border-bottom: solid 1px;
+    border-bottom: solid 1px #423f3f;
     padding: 10px 0;
 }
 
 @media screen and (max-width: 700px) {
+    .chat-community{
+        margin: 0;
+        border-radius: 0;
+    }
     .chat-community .overlay{
         display: block;
         transition: 0.3s ease-in-out;
@@ -261,7 +306,7 @@ button{
         display: block;
     }
     .chat-community{
-        margin-top: 30px;
+        /* margin-top: 30px; */
     }
     .chat-dashbord{
         border: none;

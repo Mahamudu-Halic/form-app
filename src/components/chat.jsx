@@ -9,6 +9,7 @@ import Empty from "./empty";
 import { arrayUnion, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "../utils/firebase.utils";
 import { useClerk } from "@clerk/clerk-react";
+import { hover } from "@testing-library/user-event/dist/hover";
 
 var chatRef
 const Chat = () => {
@@ -158,24 +159,37 @@ const Chat = () => {
                 <title>Chat</title>
             </Helmet>
             
-            <div className="chat-community" style={isLight ? {background: "#F2F4F6"} : {background: "#121212"}}>
+            <div className="chat-community" >
                 <div className={`${showDashboard && "overlay"}`} onClick={handleShowDashboard}></div>
                 <div className="arrow">
                     <button onClick={handleShowDashboard}>
                         <i className={`fa-solid ${showDashboard ? "fa-chevron-left" : "fa-chevron-right"}`}></i>
                     </button>
                 </div>
-                <div className={`chat-dashbord ${showDashboard && "show-dashboard"}`}>
+                <div className={`chat-dashbord ${showDashboard && "show-dashboard"}`} 
+                style={
+                    isLight ? 
+                    {
+                        background: "#dad4d4",
+                        color: "#121212"
+                    }
+                    : 
+                    {
+                        background: "#1d1d1d",
+                        color: "#fff"
+                    }
+                }>
+
                     <div className={`topic-name ${create && "add"}`}>
-                        <button onClick={handleCreate}><i className="fa-solid fa-close"></i></button>
+                        <button onClick={handleCreate} style={{color: "#fff"}}><i className="fa-solid fa-close"></i></button>
                         <form action="" onSubmit={updateTopics}>
-                            <input type="text" placeholder="topic name" />
+                            <input type="text" placeholder="topic name" required />
                             <button>create</button>
                         </form>
                     </div>
                     <div className="chat-navbar">
                         <h2>Chat</h2>
-                        <button title="create new topic" onClick={handleCreate}><i className="fa-solid fa-edit"></i></button>
+                        <button title="create new topic" onClick={handleCreate} style={isLight ? {} : {color: "#fff"}}><i className="fa-solid fa-edit"></i></button>
                     </div>
                     <div className="searchbar">
                         <input type="search" name="" id="" placeholder="search" onChange={handleChange}/>
@@ -185,12 +199,22 @@ const Chat = () => {
                         {
                             //show topics
                             filteredTopics.map(topic => (
-                                <button onClick={() => getChat(topic)}>{topic}</button>
+                                <button onClick={() => getChat(topic)} style={isLight ? {} : {color: "#fff"}}>{topic}</button>
                             ))
                         }
+                       
                     </div>
                 </div>
-                <div className="chatbox">
+                <div className="chatbox" 
+                style={isLight ? 
+                    {
+                        background: "#F2F4F6"
+                    } : 
+                    {
+                        background: "#191919",
+                        color: "#fff"
+                    }
+                }>
                     {
                         topicHeading.length !== 0 &&
                         <div className="topic-heading">
@@ -213,7 +237,15 @@ const Chat = () => {
                                     <div className="user-profile">
                                         <img src={message.profile} alt="" />
                                     </div>
-                                    <div className="message">
+                                    <div className="message"
+                                    style={isLight ? 
+                                        {
+                                            background: "#c0bdbd"
+                                        } : 
+                                        {
+                                            background: "#1d1d1d"
+                                        }
+                                    }>
                                         <p className="name">{message.name}</p>
                                         <p className="message-txt">{message.message}</p>
                                         <p className="time">{message.time}</p>
@@ -224,7 +256,16 @@ const Chat = () => {
                     </div>
 
                     <form className="entry-field" onSubmit={handleSend}>
-                        <input type="text" placeholder="Message" required/>
+                        <input type="text" placeholder="Type a message" required
+                        style={isLight ? 
+                            {
+                                background: "#c0bdbd",
+                                color: "#121212"
+                            } : 
+                            {
+                                background: "#1d1d1d"
+                            }
+                        }/>
                         <button><i className="fa-regular fa-paper-plane"></i></button>
                     </form>
                 </div>
@@ -234,3 +275,15 @@ const Chat = () => {
 }
 
 export default Chat;
+
+//send button
+/*
+ style={isLight ? 
+    {
+        color: "#c0bdbd",
+    } : 
+    {
+        color: "#1d1d1d"
+    }
+}
+*/
