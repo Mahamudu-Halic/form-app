@@ -107,6 +107,8 @@ button.activate{
 
     .form{
         flex-direction: column-reverse;
+        /* padding: 0; */
+        width: 100%;
     }
 
     .upload .file-names, .form form{
