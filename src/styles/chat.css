@@ -148,20 +148,19 @@ button{
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     width: 100%;
     position: relative;
 
 }
 
 .chat-messages{
-
     overflow: auto;
     padding: 17px 10px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     border-bottom: solid 1px #423f3f;
+    height: 100%;
 }
 
 .message{
@@ -297,8 +296,10 @@ button{
 }
 
 @media screen and (max-width: 700px) {
+    .chat{
+        height: 92vh;
+    }
     .chat-community{
-        margin: 0;
         border-radius: 0;
     }
     .chat-community .overlay{
@@ -308,15 +309,7 @@ button{
     .arrow{
         display: block;
     }
-    .chat-community{
-        /* margin-top: 30px; */
-        height: 93vh;
-    
-    }
 
-    .chatbox{
-        /* height: 100%; */
-    }
     .chat-dashbord{
         border: none;
         position: absolute;
