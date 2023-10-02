@@ -4,6 +4,8 @@
     gap: 20px;
     position: relative;
     overflow: hidden;
+    height: 100%;
+    padding-bottom: 20px;
 }
 
 .upload-home{
@@ -27,7 +29,7 @@
     width: 80%;
     /* background-color: #665f5f; */
     border-radius: 10px;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     /* border: solid 1px; */
 }
 

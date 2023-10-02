@@ -1,13 +1,16 @@
 
-
+.chat{
+    padding: 0 20px;
+    height: 90vh;
+    /* height: 100%; */
+    /* background-color: red; */
+}
 .chat-community{
-    margin: 0 20px;
     display: flex;
-    /* padding: 20px; */
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    height: 90vh;
+    height: 100%;
 }
 
 .chat-dashbord{
