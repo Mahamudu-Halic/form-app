@@ -15,8 +15,8 @@ const Theme = () => {
     return ( 
         <div className="theme">
             <button className="menu" onClick={() => setIsActive(!isActive)}>
-                {/* <i class="fa-solid fa-ellipsis-vertical"></i> */}
-                <i className="fa-solid fa-circle-half-stroke"></i>
+                <i class={`fa-regular ${isLight ? "fa-sun" : "fa-moon"}`}></i>
+                {/* <i className="fa-solid fa-circle-half-stroke"></i> */}
             </button>
            { isActive && 
            <div className="select">

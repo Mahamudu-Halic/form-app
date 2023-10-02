@@ -6,6 +6,7 @@ import '../styles/upload.css'
 import { storage } from "../utils/firebase.utils"
 import { Context } from "./context.provider"
 import { Helmet } from "react-helmet"
+import Empty from "./empty"
 
 var fileName = ""
 const Upload = () => {
@@ -104,13 +105,6 @@ const Upload = () => {
             <div className="form" style={isLight ? {background: "#fff"} : {background: "#232323"}}>
                 <form action="#" ref={formRef}onSubmit={handleSubmit}>
                     <div className="form-group">
-                        <div className="file-names">
-                            {
-                                files.map(file => (
-                                    <label htmlFor="">{file.name}</label>
-                                ))
-                            }
-                        </div>
                         <input type="file" multiple onChange={handleChange} id="file" required/>
                     </div>
 
@@ -162,6 +156,20 @@ const Upload = () => {
                     <button className={`feedback ${uploading && "activate"}`}>uploading...</button>
                     <button className={`feedback ${success && "activate"}`}>upload successful</button>
                 </form>
+
+                <div className="file-names">
+                    {
+                        files.length === 0 && <Empty />
+                    }
+                    <ol>
+
+                        {
+                        files.map(file => (
+                            <li htmlFor="">{file.name}</li>
+                        ))
+                        }
+                    </ol>
+                </div>
             </div>
         </div>
     )
