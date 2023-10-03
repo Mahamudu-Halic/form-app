@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    min-height: 90vh;
+    height: 100%;
 }
 .chat-community{
     display: flex;
@@ -23,7 +23,7 @@
     z-index: 10;
 }
 
-.topic-name{
+.create-topic{
     position: absolute;
     background-color: #000000bb;
     height: 100%;
@@ -39,30 +39,30 @@
     z-index: 50;
 }
 
-.topic-name form{
+.create-topic form{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
 
-.topic-name form input{
+.create-topic form input{
     background-color: #fff;
     color: #121212;
 }
 
-.topic-name form button{
+.create-topic form button{
 
     text-transform: capitalize;
     font-weight: normal;
     letter-spacing: 2px;
 }
 
-div.add{
+div.create{
     display: flex;
 }
 
-.chat-dashbord .topic-name input{
+.chat-dashbord .create-topic input{
     padding: 15px;
     border-color: grey;
     
@@ -71,16 +71,17 @@ div.add{
 .chat-navbar{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.chat-navbar button, .topic-name button{
+.chat-navbar button, .create-topic button{
     background: none;
     border: solid 1px grey;
     padding: 10px;
     border-radius: 5px;
 }
 
-.chat-navbar button:hover, .topic-name button:hover{
+.chat-navbar button:hover, .create-topic button:hover{
     background: grey;
 }
 
@@ -274,7 +275,7 @@ button{
 
 @media screen and (max-width: 700px) {
     .chat{
-        min-height: 92.7vh;
+        padding: 0;
     }
     
     .chat-community .overlay{

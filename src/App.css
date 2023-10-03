@@ -4,32 +4,30 @@
   box-sizing: border-box;
 }
 
-.app{
+.home{
   min-height: 100vh;
-  height: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
 .align{
   display: flex;
+  flex: 1;
   /* border: solid; */
   /* width: 100%; */
 }
 
 .routes{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   border-left: solid 1px gray;
-  min-height: 90vh;
   width: 100%;
 }
+
 
 footer{
   margin-top: 30px;
 }
 
 .empty{
-  /* width: 100%; */
   margin: auto;
 }
 
