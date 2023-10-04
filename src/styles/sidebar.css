@@ -1,8 +1,9 @@
 .items{
     /* width: 100px; */
     position: sticky;
-    height: 80vh;
+    /* height: 80vh; */
     top: 63px;
+    overflow-y: auto;
 }
 
 .sidebar button{
