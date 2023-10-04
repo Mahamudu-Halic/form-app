@@ -48,7 +48,7 @@ const SideBar = () => {
     return ( 
         <div className="sidebar">
             <div className="hamburger" onClick={handleActive}>
-                <i className="fa-solid fa-bars"></i>
+                <i className="fa-solid fa-bars-staggered"></i>
             </div>
             <div className={`items ${active && "active"}`}>
                 <div className="close" onClick={handleActive}>
