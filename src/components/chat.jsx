@@ -53,6 +53,9 @@ const Chat = () => {
 
     setTimeout(() => {
         getTopics()
+        if(currentChat !== ""){
+            getChat(currentChat)
+        }
     }, 1000);
 
 //get chat
@@ -103,9 +106,7 @@ const Chat = () => {
                 })
             })
             .then(() => {
-                setTimeout(() => {
-                    getChat(currentChat)
-                }, 1000);
+                    e.target[0].value = ""
             })
         } catch (error) {
             console.log(error)
@@ -128,10 +129,10 @@ const Chat = () => {
             await updateDoc(docRef, {
                 topic: arrayUnion(e.target[0].value)
             })
-            // .then(()=>{
-            //     e.target[0].value = "";
-            //     getTopics()
-            // })
+            .then(()=>{
+                e.target[0].value = "";
+                // getTopics()
+            })
         } catch (error) {
             console.log(error)
         }
