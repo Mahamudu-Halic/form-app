@@ -102,7 +102,7 @@ const DownloadFile = () => {
                         {
                         //if message is empty
                             comments.length === 0 &&
-                            <Empty />
+                            <Empty message={"No reviews found"}/>
                         }
                     
                     {

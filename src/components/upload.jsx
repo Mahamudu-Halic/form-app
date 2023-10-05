@@ -159,7 +159,7 @@ const Upload = () => {
 
                 <div className="file-names">
                     {
-                        files.length === 0 && <Empty />
+                        files.length === 0 && <Empty message="No files chosen"/>
                     }
                     <ol>
 

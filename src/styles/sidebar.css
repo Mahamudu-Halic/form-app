@@ -9,12 +9,17 @@
 .sidebar button{
     background: none;
     border: none;
-    padding: 25px;
+    padding: 15px;
     border-radius: 0;
     color: #797474;
     cursor: pointer;
     width: 80px;
     transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-transform: capitalize;
 }
 
 .close{
@@ -38,7 +43,7 @@
 
 @media screen and (max-width: 700px){
     .sidebar button{
-        padding: 23px;
+        padding: 13px;
     }
     .items{
         background: #3c3535;
@@ -71,9 +76,9 @@
         right: 20px;
         top: 80px;
     }
-
+    
     .hamburger i{
-        font-size: 20px;
+        /* font-size: 20px; */
     }
 
     .close{
@@ -84,7 +89,7 @@
         border: solid 1px #797474;
         border-radius: 10px;
         /* margin: 5px 5px 0 auto; */
-        margin: auto;
+        margin: 0 auto 5px;
         color: #797474;
     }
 }

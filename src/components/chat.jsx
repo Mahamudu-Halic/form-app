@@ -208,13 +208,15 @@ const Chat = () => {
                         </div>
                         // : <div className="overlay"></div>
                     }
+
+                    {/* chat messages */}
                     <div
                         ref={scrollContainerRef}
                         className="chat-messages">
                         {
                         //if message is empty
                             messages.length === 0 &&
-                            <Empty />
+                            <Empty message={"No message found"}/>
                         }
                         {
                             //show messages

@@ -105,14 +105,14 @@ const Contact = () => {
                     <form action="" ref={form} onSubmit={handleSubmit}>
                         {/* full name */}
                         <div className="form-group">
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name">Name *</label>
                             <input type="text" id="name" required name="user_name"/>
                         </div>
 
                         {/* email address */}
                         <div className="form-group">
-                            <label htmlFor="email">Email Address</label>
-                            <input type="email" id="email" name="user_email" placeholder="example@address.com"/>
+                            <label htmlFor="email">Email Address *</label>
+                            <input type="email" id="email" name="user_email" placeholder="example@address.com" required/>
                         </div>
 
                         {/* phone number */}
@@ -121,7 +121,8 @@ const Contact = () => {
                             <input type="text" id="phone" name="user_number" placeholder="+233 552 802 788"/>
                         </div>
                         <div className="form-group">
-                            <textarea name="message" id="" cols="30" rows="10" placeholder="Write a message..." required></textarea>
+                            <label htmlFor="message">Message *</label>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Write a message..." required></textarea>
                         </div>
 
                         <label htmlFor="terms">

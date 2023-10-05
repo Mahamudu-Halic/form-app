@@ -53,7 +53,7 @@ const CourseMaterials = () => {
                 //no files or videos
                 !getFiles.length && 
                 !getVideos.length &&
-                <Empty />
+                <Empty message={"No files found"}/>
             }
 
             {/* course contents */}

@@ -59,7 +59,7 @@ const SideBar = () => {
                         return(
                             <div className="" key={list.title} title={list.title} onClick={handleActive}>
                                 <NavLink to={list.link}>
-                                    <button><i className={list.icon}></i></button>
+                                    <button><i className={list.icon}></i>{list.title}</button>
                                 </NavLink>
                             </div>
                         )
