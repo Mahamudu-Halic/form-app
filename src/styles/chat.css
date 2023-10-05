@@ -1,6 +1,6 @@
 
 .chat{
-    padding: 0 20px;
+    /* padding: 0 20px; */
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -277,7 +277,7 @@ button{
     padding: 10px 0;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .chat{
         padding: 0;
     }

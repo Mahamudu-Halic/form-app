@@ -47,6 +47,7 @@ const SideBar = () => {
     ]
     return ( 
         <div className={`sidebar ${active && "active"}`}>
+            {active && <div className="overlay" onClick={handleActive}></div>}
                 <div className="hamburger" onClick={handleActive}>
                     <i className="fa-solid fa-bars-staggered"></i>
                 </div>
@@ -59,15 +60,16 @@ const SideBar = () => {
                 <div className="close" onClick={handleActive}>
                     <i className="fa-solid fa-close"></i>
                 </div>
-
+                <div className="user">
                     <UserButton />
+                </div>
                 <Theme />
                 <div className="nav-items">
 
                 {
                     sideBarList.map(list => {
                         return(
-                            <div key={list.title} title={list.title} onClick={() => { if(active){handleActive()}}}>
+                            <div key={list.title} title={list.title} onClick={handleActive}>
                                 <NavLink to={list.link}>
                                     <button><i className={list.icon}></i>{list.title}</button>
                                 </NavLink>

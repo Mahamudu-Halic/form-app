@@ -18,7 +18,7 @@ const HomePage = () => {
     return ( 
         <div className="home" style={isLight? {background: theme.light.background, color: theme.light.color} : {background: theme.dark.background, color: theme.dark.color}}>            
             {/* <Navbar /> */}
-            <div className="align">
+            {/* <div className="align"> */}
                 <SideBar />
                 <div className="routes">
                     <Routes>
@@ -33,7 +33,7 @@ const HomePage = () => {
                         <Route path="/courses/:param/:year/:route" element={<DownloadFile />} />
                     </Routes>
                 </div>
-            </div>
+            {/* </div> */}
         </div>
     );
 }

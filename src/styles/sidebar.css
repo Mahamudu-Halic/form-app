@@ -11,6 +11,11 @@
     padding: 0;
 }
 
+.sidebar .cl-internal-11ewti4{
+    width: 4rem;
+    height: 4rem;
+}
+
 .nav{
     display: flex;
     flex-direction: column;
@@ -46,9 +51,9 @@
     width: 100%;
     transition: 0.3s ease;
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     align-items: center;
-    gap: 5px;
+    gap: 15px;
     text-transform: capitalize;
 }
 
@@ -71,17 +76,27 @@
     display: none;
 }
 
-@media screen and (max-width: 700px){
+.sidebar .overlay{
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    .sidebar .overlay{
+        display: block;
+    }
     .nav{
         z-index: 200;
         background: #000000;
+        width: 80%;
+        margin-left: auto;
     }
     .sidebar{
+        display: flex;
         position: fixed;
         z-index: 100;
         right: -800px;
         transition: 0.3s ease;
-        width: 80%;
+        width: 100%;
     }
 
     .active{

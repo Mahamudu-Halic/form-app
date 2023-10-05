@@ -7,7 +7,7 @@
 .home{
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .align{
@@ -39,5 +39,9 @@
 @media screen and (max-width: 700px) {
   .routes{
     border: none;
+  }
+
+  .navbar{
+    display: none;
   }
 }
