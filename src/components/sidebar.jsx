@@ -67,7 +67,7 @@ const SideBar = () => {
                 {
                     sideBarList.map(list => {
                         return(
-                            <div key={list.title} title={list.title} onClick={handleActive}>
+                            <div key={list.title} title={list.title} onClick={() => { if(active){handleActive()}}}>
                                 <NavLink to={list.link}>
                                     <button><i className={list.icon}></i>{list.title}</button>
                                 </NavLink>

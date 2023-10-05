@@ -19,7 +19,7 @@ const Theme = () => {
                 {isLight ? "Light" : "Dark"}
             </button>
         </div>
-     );
+    );
 }
  
 export default Theme;
