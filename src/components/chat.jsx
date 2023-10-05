@@ -104,9 +104,7 @@ const Chat = () => {
             })
             .then(() => {
                 e.target[0].value = ""
-                setTimeout(() => {
-                    getChat(currentChat)
-                }, 3000);
+                getChat(currentChat)
             })
         } catch (error) {
             console.log(error)
