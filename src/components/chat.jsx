@@ -196,7 +196,6 @@ const Chat = () => {
                                 <button onClick={() => getChat(topic)} style={isLight ? {} : {color: "#fff"}}>{topic}</button>
                             ))
                         }
-                        
                     </div>
                 </div>
 
