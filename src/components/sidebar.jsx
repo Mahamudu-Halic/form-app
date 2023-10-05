@@ -46,10 +46,10 @@ const SideBar = () => {
         },
     ]
     return ( 
-        <div className="sidebar">
-            <div className="hamburger" onClick={handleActive}>
-                <i className="fa-solid fa-bars-staggered"></i>
-            </div>
+        <div className={`sidebar ${active && "active"}`}>
+                <div className="hamburger" onClick={handleActive}>
+                    <i className="fa-solid fa-bars-staggered"></i>
+                </div>
             <div className={`nav ${active && "active"}`}>
                 <div className="brand">
                     <NavLink to="/">
