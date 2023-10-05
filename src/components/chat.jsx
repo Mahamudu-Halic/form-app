@@ -53,17 +53,14 @@ const Chat = () => {
 
     setTimeout(() => {
         getTopics()
-        if(currentChat !== ""){
-            getChat(currentChat)
-        }
+        // getChat(currentChat)
     }, 1000);
 
 //get chat
     const getChat = async (chat) => {
         chatRef = doc(db, "chats", chat)
-        setCurrentChat(chat)
         const docSnap = await getDoc(chatRef)
-        setTopicHeading(chat)
+        setCurrentChat(chat)
         try {
             if(docSnap.exists()){
                 setMessages(docSnap.data().chats)
@@ -106,7 +103,10 @@ const Chat = () => {
                 })
             })
             .then(() => {
-                    e.target[0].value = ""
+                e.target[0].value = ""
+                setTimeout(() => {
+                    getChat(currentChat)
+                }, 3000);
             })
         } catch (error) {
             console.log(error)
@@ -203,9 +203,9 @@ const Chat = () => {
                 {/* chatbox */}
                 <div className="chatbox" style={isLight ?  {background: "#F2F4F6" } :  {background: "#191919",color: "#fff"}}>
                     {
-                        topicHeading.length !== 0 &&
+                        currentChat.length !== 0 &&
                         <div className="topic-heading">
-                            <h2>{topicHeading}</h2>
+                            <h2>{currentChat}</h2>
                         </div>
                         // : <div className="overlay"></div>
                     }
