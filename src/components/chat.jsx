@@ -51,9 +51,9 @@ const Chat = () => {
         return () => {getTopics()}
     }, [])
 
-    setTimeout(() => {
-        getTopics()
-    }, 1000);
+    // setTimeout(() => {
+    //     getTopics()
+    // }, 1000);
 
 //get chat
     const getChat = async (chat) => {
