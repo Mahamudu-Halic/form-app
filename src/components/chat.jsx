@@ -16,7 +16,7 @@ const Chat = () => {
 
     const docRef = doc(db, "chats", "topics")
     const date = new Date()
-    const [currentChat, setCurrentChat] = useState()
+    const [currentChat, setCurrentChat] = useState("")
     const [topicHeading, setTopicHeading] = useState("")
     const [messages, setMessages] = useState([])
     const [topic, setTopic] = useState([])
@@ -51,9 +51,9 @@ const Chat = () => {
         return () => {getTopics()}
     }, [])
 
-    // setTimeout(() => {
-    //     getTopics()
-    // }, 1000);
+    setTimeout(() => {
+        getTopics()
+    }, 1000);
 
 //get chat
     const getChat = async (chat) => {
@@ -94,7 +94,6 @@ const Chat = () => {
     const handleSend = async (e) => {
         e.preventDefault()
         try {
-            
             await updateDoc(chatRef, {
                 chats: arrayUnion({
                     message: e.target[0].value,
@@ -104,8 +103,9 @@ const Chat = () => {
                 })
             })
             .then(() => {
-                e.target[0].value = "";
-                getChat(currentChat)
+                setTimeout(() => {
+                    getChat(currentChat)
+                }, 1000);
             })
         } catch (error) {
             console.log(error)
@@ -128,10 +128,10 @@ const Chat = () => {
             await updateDoc(docRef, {
                 topic: arrayUnion(e.target[0].value)
             })
-            .then(()=>{
-                e.target[0].value = "";
-                getTopics()
-            })
+            // .then(()=>{
+            //     e.target[0].value = "";
+            //     getTopics()
+            // })
         } catch (error) {
             console.log(error)
         }
