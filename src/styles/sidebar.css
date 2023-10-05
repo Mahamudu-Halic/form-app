@@ -10,12 +10,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 200px;
     gap: 10px;
 }
 
 .nav h1{
-    color: #d75b03;
+    color: #ff5e00;
 }
 
 .nav-items{
@@ -75,10 +75,10 @@
         height: 100%;
         /* top: 50px; */
         /* left: -200px; */
-        right: -400px;
+        right: -800px;
         transition: 0.3s ease;
         padding-top: 20px;
-        width: 60vw;
+        width: 80%;
 
     }
 

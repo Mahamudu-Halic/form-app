@@ -12,8 +12,6 @@ const Theme = () => {
         setIsActive(!isActive)
     }
 
-    console.log(isActive)
-
     return ( 
         <div className="theme">
             <button className="menu" onClick={handleClick}>
