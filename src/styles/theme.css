@@ -1,8 +1,10 @@
 .theme{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    z-index: 100;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    /* align-items: flex-end; */
+    /* z-index: 100; */
+    /* position: relative; */
 }
 
 .menu{
@@ -11,39 +13,7 @@
     padding: 5px;
     background: none;
     cursor: pointer;
-    width: 35px;
+    /* width: 35px; */
 }
 
-.menu i{
-    font-size: 19px;
-    color: #fff;
-}
-
-.select{
-    background-color: gray;
-    display: flex;
-    flex-direction: column;
-    width: 100px;
-    position: absolute;
-    top: 70px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.select button{
-    cursor: pointer;
-    width: 100%;
-    padding: 10px;
-    text-transform: capitalize;
-    transition: 0.3s ease;
-    background: none;
-    border: none;
-    border-radius: 0;
-    color: #fff;
-    font-size: 16px;
-}
-
-.select button:hover{
-    background: #343131;
-}
 

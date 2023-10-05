@@ -7,25 +7,19 @@ const Theme = () => {
     const [isActive, setIsActive] = useState(false)
     const {isLight, changeTheme} = useContext(Context)
 
-    const handleClick = bool => {
-        changeTheme(bool)
+    const handleClick = () => {
+        changeTheme(!isActive)
         setIsActive(!isActive)
     }
 
+    console.log(isActive)
+
     return ( 
         <div className="theme">
-            <button className="menu" onClick={() => setIsActive(!isActive)}>
+            <button className="menu" onClick={handleClick}>
                 <i class={`fa-regular ${isLight ? "fa-sun" : "fa-moon"}`}></i>
-                {/* <i className="fa-solid fa-circle-half-stroke"></i> */}
+                {isLight ? "Light" : "Dark"}
             </button>
-           { isActive && 
-           <div className="select">
-                
-                <button 
-                    onClick={() => handleClick(true)}
-                >light</button>
-                <button onClick={() => handleClick(false)}>dark</button>
-            </div>}
         </div>
      );
 }

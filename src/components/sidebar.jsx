@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import "../styles/sidebar.css"
 import { NavLink } from "react-router-dom";
+import { UserButton, useClerk } from "@clerk/clerk-react";
+import Theme from "./theme";
 const SideBar = () => {
     const [active, setIsActive] = useState(false)
+    const {user} = useClerk()
 
     const handleActive = () => {
         setIsActive(!active)
     }
+
+
 
     const sideBarList = [
         {
@@ -39,25 +44,30 @@ const SideBar = () => {
             title: "contact",
             link: "contact",
         },
-        {
-            icon: "fa-solid fa-user",
-            title: "profile",
-            link: "profile",
-        },
     ]
     return ( 
         <div className="sidebar">
             <div className="hamburger" onClick={handleActive}>
                 <i className="fa-solid fa-bars-staggered"></i>
             </div>
-            <div className={`items ${active && "active"}`}>
+            <div className={`nav ${active && "active"}`}>
+                <div className="brand">
+                    <NavLink to="/">
+                        <h1>ShareSync</h1>
+                    </NavLink>
+                </div>
                 <div className="close" onClick={handleActive}>
                     <i className="fa-solid fa-close"></i>
                 </div>
+
+                    <UserButton />
+                <Theme />
+                <div className="nav-items">
+
                 {
                     sideBarList.map(list => {
                         return(
-                            <div className="" key={list.title} title={list.title} onClick={handleActive}>
+                            <div key={list.title} title={list.title} onClick={handleActive}>
                                 <NavLink to={list.link}>
                                     <button><i className={list.icon}></i>{list.title}</button>
                                 </NavLink>
@@ -65,6 +75,7 @@ const SideBar = () => {
                         )
                     })
                 }
+                </div>
             </div>
         </div>
      );
