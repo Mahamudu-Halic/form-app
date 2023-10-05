@@ -78,6 +78,7 @@
         right: -400px;
         transition: 0.3s ease;
         padding-top: 20px;
+        width: 60vw;
 
     }
 
@@ -97,7 +98,7 @@
         z-index: 200;
         cursor: pointer;
         right: 20px;
-        top: 10px;
+        top: 60px;
     }
     
     .hamburger i{
