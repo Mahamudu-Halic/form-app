@@ -133,7 +133,7 @@ button{
     padding: 0 20px 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    /* gap: 10px; */
     width: 100%;
     position: relative;
 }
@@ -145,8 +145,8 @@ button{
     flex-direction: column;
     gap: 15px;
     /* height: 90vh; */
+    min-height: 60vh;
 
-    border-bottom: solid 1px #423f3f;
 }
 
 .message{
@@ -161,12 +161,13 @@ button{
 
 
 .entry-field{
+    border-top: solid 1px #423f3f;
+    padding-top: 10px;
     margin-top: auto;
     display: flex;
     align-items: center;
     gap: 10px;
     z-index: 10;
-    /* border-top: solid 1px #423f3f; */
 }
 
 .entry-field input{
