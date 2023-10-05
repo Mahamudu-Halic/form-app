@@ -27,7 +27,7 @@ const SideBar = () => {
         {
             icon: "fa-regular fa-message",
             title: "community",
-            link: "chat",
+            link: "community",
         },
         {
             icon: "fa-solid fa-book-open",

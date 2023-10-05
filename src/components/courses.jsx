@@ -44,7 +44,7 @@ const Courses = () => {
                     <CourseList listIndex='2' />
                 </div>
 
-                <h3>collage of art and built env</h3>
+                <h3>collage of art and built environment</h3>
                 <div className="course-links">
                         <CourseList listIndex='3' />
                 </div>

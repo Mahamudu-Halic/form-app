@@ -27,7 +27,7 @@ const HomePage = () => {
                         <Route path="/courses" element={<Courses/>} />
                         <Route path="/upload" element={<Upload/>} />
                         <Route path="/profile" element={<Profile/>} />
-                        <Route path="/chat" element={<Chat/>} />
+                        <Route path="/community" element={<Chat/>} />
                         <Route path="/contact" element={<Contact/>} />
                         <Route path="/quiz" element={<Quiz/>} />
                         <Route path="/courses/:param" element={<CourseMaterials />} />

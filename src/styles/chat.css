@@ -20,7 +20,7 @@
     flex-direction: column;
     gap: 20px;
     position: relative;
-    z-index: 10;
+    z-index: 11;
 }
 
 .create-topic{
@@ -299,7 +299,7 @@ button{
 
     .chat-dashbord{
         border: none;
-        position: absolute;
+        position: fixed;
         height: 100%;
         left: -300px;
         transition: 0.3s ease-in-out;
