@@ -196,7 +196,25 @@ const Chat = () => {
                                 <button onClick={() => getChat(topic)} style={isLight ? {} : {color: "#fff"}}>{topic}</button>
                             ))
                         }
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
+                        <button>hello</button>
                     </div>
+                    <p>sd</p>
                 </div>
 
                 {/* chatbox */}

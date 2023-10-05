@@ -10,8 +10,8 @@
     display: flex;
     border-radius: 10px;
     overflow: hidden;
-    position: relative;
-    height: 100%;
+    /* position: fixed; */
+    /* height: 100%; */
 }
 
 .chat-dashbord{
@@ -136,7 +136,6 @@ button{
     gap: 10px;
     width: 100%;
     position: relative;
-
 }
 
 .chat-messages{
@@ -145,7 +144,7 @@ button{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    height: 90vh;
+    /* height: 90vh; */
 
     border-bottom: solid 1px #423f3f;
 }
