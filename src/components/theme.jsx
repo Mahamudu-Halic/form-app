@@ -15,7 +15,7 @@ const Theme = () => {
     return ( 
         <div className="theme">
             <button className="menu" onClick={handleClick}>
-                <i class={`fa-regular ${isLight ? "fa-sun" : "fa-moon"}`}></i>
+                <i class={`bi ${isLight ? "bi-sun" : "bi-moon"}`}></i>
                 {isLight ? "Light" : "Dark"}
             </button>
         </div>

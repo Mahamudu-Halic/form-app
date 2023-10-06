@@ -1,11 +1,10 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import "../styles/sidebar.css"
 import { NavLink } from "react-router-dom";
-import { UserButton, useClerk } from "@clerk/clerk-react";
+import { UserButton } from "@clerk/clerk-react";
 import Theme from "./theme";
 const SideBar = () => {
     const [active, setIsActive] = useState(false)
-    const {user} = useClerk()
 
     const handleActive = () => {
         setIsActive(!active)
@@ -15,32 +14,32 @@ const SideBar = () => {
 
     const sideBarList = [
         {
-            icon: "fa-solid fa-home",
+            icon: "bi bi-house",
             title: "home",
             link: "/",
         },
         {
-            icon: "fa-solid fa-book",
+            icon: "bi bi-journal",
             title: "course",
             link: "courses",
         },
         {
-            icon: "fa-solid fa-upload",
+            icon: "bi bi-upload",
             title: "upload",
             link: "upload",
         },
         {
-            icon: "fa-regular fa-message",
+            icon: "bi bi-chat",
             title: "community",
             link: "community",
         },
         {
-            icon: "fa-solid fa-book-open",
+            icon: "bi bi-book",
             title: "quiz",
             link: "quiz",
         },
         {
-            icon: "fa-solid fa-headset",
+            icon: "bi bi-headset",
             title: "contact",
             link: "contact",
         },
@@ -58,7 +57,7 @@ const SideBar = () => {
                     </NavLink>
                 </div>
                 <div className="close" onClick={handleActive}>
-                    <i className="fa-solid fa-close"></i>
+                    <i className="bi bi-x"></i>
                 </div>
                 <div className="user">
                     <UserButton />

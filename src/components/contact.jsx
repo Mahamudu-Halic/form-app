@@ -55,7 +55,7 @@ const Contact = () => {
                     <div className="contact-info">
                         <div className="info">
                             <div className="icon">
-                                <i className="fa-solid fa-location-dot"></i>
+                                <i className="bi bi-geo-alt"></i>
                             </div>
                             <div className="content">
                                 <h3>Location</h3>
@@ -65,7 +65,7 @@ const Contact = () => {
                         </div>
                         <div className="info">
                         <div className="icon">
-                            <i className="fa-solid fa-phone-volume"></i>
+                            <i className="bi bi-telephone"></i>
                         </div>
                             <div className="content">
                                 <h3>Contact</h3>
@@ -75,7 +75,7 @@ const Contact = () => {
                         </div>
                         <div className="info">
                         <div className="icon">
-                            <i className="fa-solid fa-envelope"></i>
+                            <i className="bi bi-envelope"></i>
                         </div>
                             <div className="content">
                                 <h3>Email</h3>
@@ -84,7 +84,7 @@ const Contact = () => {
                         </div>
                         <div className="info">
                         <div className="icon">
-                            <i className="fa-solid fa-clock"></i>
+                            <i className="bi bi-clock"></i>
                         </div>
                             <div className="content">
                                 <h3>Hours of Operation</h3>
@@ -130,7 +130,7 @@ const Contact = () => {
                             Accept terms and privacy policy
                         </label>
 
-                        <button>Send Message</button>
+                        <button><i className="bi bi-send"></i> Send Message</button>
                     </form>
 
                     <button className={`feedback ${sending && "activate"}`}>sending...</button>

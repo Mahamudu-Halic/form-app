@@ -12,8 +12,8 @@ const Footer = () => {
 
                     <div className="footer-contact">
                         <h3>contact us</h3>
-                        <p><i className="fa-solid fa-phone"></i> +233 552 802 788</p>
-                        <p><i className="fa-solid fa-envelope"></i> mahamuduhalic@gmail.com</p>
+                        <p><i className="bi bi-telephone"></i> +233 552 802 788</p>
+                        <p><i className="bi bi-envelope"></i> mahamuduhalic@gmail.com</p>
                     </div>
                 </div>
 
@@ -25,13 +25,13 @@ const Footer = () => {
                     <h3>social media</h3>
                     <div className="media-icons">
                         <a href="#" target="_blank">
-                            <i className="fa-brands fa-x-twitter"></i>
+                            <i className="bi bi-twitter-x"></i>
                         </a>
                         <a href="#">
-                            <i className="fa-brands fa-github"></i>
+                            <i className="bi bi-github"></i>
                         </a>
                         <a href="#" target="_blank">
-                            <i className="fa-brands fa-linkedin"></i>
+                            <i className="bi bi-linkedin"></i>
                         </a>
                     </div>
                 </div>

@@ -87,14 +87,14 @@ const DownloadFile = () => {
             </div>
             <h2>{route}</h2>
             <div className="links">
-                <a href={url} className="download">download</a>
+                <a href={url} className="download"><i className="bi bi-download"></i> download</a>
                 <Link to={`/courses/${param}`}>back</Link>
             </div>
 
             <div className="comments">
                 <form action="" onSubmit={handleSend}>
                     <input type="text" required placeholder="add comment..."/>
-                    <button><i className="fa-solid fa-paper-plane"></i></button>
+                    <button><i className="bi bi-send"></i></button>
                 </form>
 
                 <h3>Reviews : <span>{comments.length}</span></h3>

@@ -1,8 +1,7 @@
-import { Route, Routes, useParams } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Chat from "./chat";
 import Contact from "./contact";
 import Courses from "./courses";
-import Navbar from "./navbar";
 import Overview from "./overview";
 import SideBar from "./sidebar";
 import Upload from "./upload";

@@ -3,12 +3,9 @@ import vision from "../images/our-vision.jpg"
 import process from "../images/our-process.jpg"
 import approach from "../images/our-approach.jpg"
 import "../styles/overview.css"
-import { useClerk } from "@clerk/clerk-react";
 import Footer from "./footer";
 
 const Overview = () => {
-    const {user} = useClerk()
-
     return ( 
         <div className="overview">
              <Helmet>
@@ -81,15 +78,15 @@ const Overview = () => {
 
                 <div className="cards">
                     <div className="card">
-                    <i className="fa-solid fa-chart-line"></i>
+                    <i className="bi bi-graph-up-arrow"></i>
                         <p>Growth</p>
                     </div>
                     <div className="card">
-                    <i className="fa-solid fa-dumbbell"></i>
+                    <i className="bi bi-code-slash"></i>
                         <p>Skills</p>
                     </div>
                     <div className="card">
-                    <i className="fa-regular fa-message"></i>
+                    <i className="bi bi-person-arms-up"></i>
                         <p>Interactivity</p>
                     </div>
                 </div>

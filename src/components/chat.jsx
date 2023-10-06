@@ -9,7 +9,6 @@ import Empty from "./empty";
 import { arrayUnion, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "../utils/firebase.utils";
 import { useClerk } from "@clerk/clerk-react";
-import { hover } from "@testing-library/user-event/dist/hover";
 
 var chatRef
 const Chat = () => {
@@ -17,7 +16,6 @@ const Chat = () => {
     const docRef = doc(db, "chats", "topics")
     const date = new Date()
     const [currentChat, setCurrentChat] = useState("")
-    const [topicHeading, setTopicHeading] = useState("")
     const [messages, setMessages] = useState([])
     const [topic, setTopic] = useState([])
     const {isLight} = useContext(Context)
@@ -163,7 +161,7 @@ const Chat = () => {
                 <div className={`${showDashboard && "overlay"}`} onClick={handleShowDashboard}></div>
                 <div className="arrow">
                     <button onClick={handleShowDashboard}>
-                        <i className={`fa-solid ${showDashboard ? "fa-chevron-left" : "fa-chevron-right"}`}></i>
+                        <i className={`bi ${showDashboard ? "bi-arrow-left" : "bi-arrow-right"}`}></i>
                     </button>
                 </div>
                 {/* dashboard */}
@@ -234,9 +232,10 @@ const Chat = () => {
                         }
                     </div>
 
+                    {/* entry field */}
                     <form className="entry-field" onSubmit={handleSend}>
                         <input type="text" placeholder="Type a message" required style={isLight ?  { background: "#c0bdbd", color: "#121212" } :  { background: "#1d1d1d" } }/>
-                        <button><i className="fa-regular fa-paper-plane"></i></button>
+                        <button><i className="bi bi-send"></i></button>
                     </form>
                 </div>
             </div>

@@ -88,7 +88,7 @@ const CourseMaterials = () => {
                 </div>
             </div>
 
-            <Link to="/courses" className="back-link" title="back"><i className="fa-solid fa-arrow-left-long"></i></Link>
+            <Link to="/courses" className="back-link" title="back"><i className="bi bi-arrow-left"></i></Link>
 
         </div>
     );

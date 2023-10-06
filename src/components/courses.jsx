@@ -1,21 +1,10 @@
-import { useContext } from 'react'
-import { Context } from './context.provider'
 import "../styles/courses.css"
 import { Helmet } from 'react-helmet'
-import { Link } from 'react-router-dom'
 import CourseList from './courseList'
 
 const Courses = () => {
     //usecontext
-    const {courseList} = useContext(Context)
 
-    const createCourseList = index => {
-        courseList[index].map(list => {
-            return(
-                <Link to={list.course} key={list.course}>{list.course}</Link>
-            )
-        })
-    }
     return(
         <div className="courses">
             <Helmet>
