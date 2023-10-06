@@ -24,13 +24,13 @@ const Footer = () => {
                 <div className="footer-media">
                     <h3>social media</h3>
                     <div className="media-icons">
-                        <a href="#" target="_blank">
+                        <a href="https://twitter.com/mahamuduhalic" target="_blank" rel="noreferrer">
                             <i className="bi bi-twitter-x"></i>
                         </a>
-                        <a href="#">
+                        <a href="https://github.com/Mahamudu-Halic" rel="noreferrer" target="_blank">
                             <i className="bi bi-github"></i>
                         </a>
-                        <a href="#" target="_blank">
+                        <a href="https://www.linkedin.com/in/halic-mahamudu-361946216/" rel="noreferrer" target="_blank">
                             <i className="bi bi-linkedin"></i>
                         </a>
                     </div>

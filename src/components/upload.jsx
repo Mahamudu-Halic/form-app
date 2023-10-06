@@ -1,7 +1,6 @@
 import { useRef, useState } from "react"
 import { ref, uploadBytesResumable } from "firebase/storage"
 import { useContext } from "react"
-import upload from '../images/upload1.svg'
 import '../styles/upload.css'
 import { storage } from "../utils/firebase.utils"
 import { Context } from "./context.provider"
@@ -61,7 +60,7 @@ const Upload = () => {
     const handleSubmit = async e => {
         e.preventDefault()
         try{
-            if(course !== 'select course' && year !== 'select year' && files.length != 0){
+            if(course !== 'select course' && year !== 'select year' && files.length !== 0){
                 setUploading(true)
                 if(fileName.includes('.doc') || fileName.includes('.ppt') || fileName.includes('.pdf')){
                     return handleUpload('files')

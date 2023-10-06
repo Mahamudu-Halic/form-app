@@ -1,9 +1,8 @@
 import { Link, useParams } from "react-router-dom";
-import excel from "../images/excel-DJujneaYS-transformed.png"
 import powerpoint from "../images/powerpoint.png"
 import word from "../images/word.png"
 import pdf from "../images/pdf.png"
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getDownloadURL, getStorage, ref } from "firebase/storage";
 import "../styles/downloadfile.css"
 import { useClerk } from "@clerk/clerk-react";

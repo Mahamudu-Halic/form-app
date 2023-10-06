@@ -288,6 +288,7 @@ button{
 
     .chat-community{
         border-radius: 0;
+        position: relative;
     }
     
     .chat-community .overlay{
