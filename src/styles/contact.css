@@ -177,7 +177,7 @@ iframe{
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 840px) {
     .content p{
         font-size: 14px;
     }

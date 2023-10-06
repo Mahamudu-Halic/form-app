@@ -209,7 +209,7 @@ button{
     position: fixed;
     top: 45%;
     left: 5px;
-    z-index: 20;
+    z-index: 31;
     display: none;
 }
 
@@ -277,7 +277,7 @@ button{
     padding: 10px 0;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 840px) {
     .chat{
         padding: 0;
     }
@@ -293,6 +293,7 @@ button{
     .chat-community .overlay{
         display: block;
         transition: 0.3s ease-in-out;
+        z-index: 20;
     }
     .arrow{
         display: block;
@@ -304,6 +305,7 @@ button{
         height: 100%;
         left: -300px;
         transition: 0.3s ease-in-out;
+        z-index: 30;
     }
 
     .chat-community div.show-dashboard{

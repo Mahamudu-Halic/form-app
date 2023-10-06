@@ -100,7 +100,7 @@ button.activate{
     flex-direction: column;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 840px) {
     .upload-home h2{
         font-size: 40px;
     }
