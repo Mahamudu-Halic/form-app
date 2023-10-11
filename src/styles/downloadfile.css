@@ -96,7 +96,10 @@
 .comments form button{
     padding: 10px;
     background: #2c8a30;
-    border-color: #2c8a30;
+    /* border-color: #2c8a30; */
+    border: solid 1px;
+    border-radius: 5px;
+    color: #fff;
 }
 
 @media screen and (max-width: 700px) {

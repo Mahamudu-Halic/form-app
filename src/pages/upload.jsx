@@ -148,7 +148,7 @@ const Upload = () => {
                         }
                     </div>
 
-                    <button><i className='bi bi-upload'></i> Upload</button>
+                    <button className="upload-btn"><i className='bi bi-upload'></i> Upload</button>
                     {/* {uploading && <p>uploading...</p>} */}
                     {/* {success && <p>upload successful</p>} */}
                     <button className={`feedback ${uploading && "activate"}`}>uploading...</button>
