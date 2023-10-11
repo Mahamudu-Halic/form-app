@@ -3,10 +3,9 @@ import { ref, uploadBytesResumable } from "firebase/storage"
 import { useContext } from "react"
 import '../styles/upload.css'
 import { storage } from "../utils/firebase.utils"
-import { Context } from "./context.provider"
+import { Context } from "../components/context.provider"
 import { Helmet } from "react-helmet"
-import Empty from "./empty"
-
+import {Empty} from "../components"
 var fileName = ""
 const Upload = () => {
     //useContext

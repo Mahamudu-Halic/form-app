@@ -1,4 +1,4 @@
-import empty from "../images/empty.png"
+import empty from "../assets/empty.png"
 const Empty = ({message}) => {
     return ( 
         <div className="empty">

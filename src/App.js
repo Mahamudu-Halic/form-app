@@ -1,6 +1,5 @@
 import "./App.css"
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
-import HomePage from "./components/home";
 import { 
   ClerkProvider, 
   SignedIn,
@@ -10,6 +9,7 @@ import {
   RedirectToSignIn
 } from "@clerk/clerk-react";
 import ContextProvider from "./components/context.provider";
+import HomePage from "./pages/home";
 const App = () => {
   
   if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {

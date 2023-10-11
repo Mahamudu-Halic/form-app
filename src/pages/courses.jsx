@@ -1,10 +1,8 @@
 import "../styles/courses.css"
 import { Helmet } from 'react-helmet'
-import CourseList from './courseList'
+import {CourseList} from "../components"
 
 const Courses = () => {
-    //usecontext
-
     return(
         <div className="courses">
             <Helmet>

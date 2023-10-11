@@ -1,14 +1,14 @@
 import { Link, useParams } from "react-router-dom";
-import powerpoint from "../images/powerpoint.png"
-import word from "../images/word.png"
-import pdf from "../images/pdf.png"
+import powerpoint from "../../assets/powerpoint.png"
+import word from "../../assets/word.png"
+import pdf from "../../assets/pdf.png"
 import { useEffect, useState } from "react";
 import { getDownloadURL, getStorage, ref } from "firebase/storage";
-import "../styles/downloadfile.css"
 import { useClerk } from "@clerk/clerk-react";
 import { arrayUnion, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
-import { db } from "../utils/firebase.utils";
-import Empty from "./empty";
+import { db } from "../../utils/firebase.utils";
+import Empty from "../empty";
+import "../../styles/downloadfile.css"
 const DownloadFile = () => {
 
     const {route, param, year} = useParams()

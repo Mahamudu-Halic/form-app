@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet";
-import vision from "../images/our-vision.jpg"
-import process from "../images/our-process.jpg"
-import approach from "../images/our-approach.jpg"
+import vision from "../assets/our-vision.jpg"
+import process from "../assets/our-process.jpg"
+import approach from "../assets/our-approach.jpg"
 import "../styles/overview.css"
-import Footer from "./footer";
+import {Footer, ChatBot} from "../components"
 
 const Overview = () => {
     return ( 
@@ -16,7 +16,7 @@ const Overview = () => {
             <section className="welcome">
                 <div className="overlay"></div>
                 <div className="welcome-msg">
-                    <h1>Welcome to ShareSync</h1>
+                    <h1>Welcome to <span className="title">ShareSync</span></h1>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor numquam voluptatum totam a! Laboriosam, expedita porro temporibus corporis explicabo illum nostrum, omnis officia, sit distinctio exercitationem labore! Laudantium, mollitia repellendus.</p>
                 </div>
             </section>
@@ -72,7 +72,7 @@ const Overview = () => {
 
             {/* our services */}
             <section className="services">
-                <div className="title">
+                <div className="">
                     <h2>Services</h2>
                 </div>
 
@@ -91,6 +91,10 @@ const Overview = () => {
                     </div>
                 </div>
             </section>
+
+            {/* chatbot */}
+            <ChatBot />
+            {/* footer */}
             <Footer />
         </div>
      );

@@ -1,8 +1,8 @@
-import '../styles/footer.css'
+import '../../styles/footer.css'
 const Footer = () => {
     return(
         <footer>
-            <h2>Share<span>Sync</span></h2>
+            <h2><span className='title'>ShareSync</span></h2>
             <div className="footer">
                 <div className="footer-info">
                     <div className="footer-about">

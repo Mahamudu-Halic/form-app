@@ -1,11 +1,11 @@
 import { Link, useParams } from "react-router-dom";
-import { storage } from '../utils/firebase.utils'
+import { storage } from '../../utils/firebase.utils'
 import {ref, listAll} from 'firebase/storage'
 import {useEffect, useState } from 'react'
 import GenerateFiles from './generateFiles'
 import GenerateVideos from './generateVideos'
-import "../styles/courses.css"
-import Empty from "./empty";
+import "../../styles/courses.css"
+import Empty from "../empty";
 
 
 const CourseMaterials = () => {

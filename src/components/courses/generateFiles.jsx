@@ -1,7 +1,7 @@
-import word from '../images/word.png'
-import pdf from '../images/pdf.png'
-import powerpoint from '../images/powerpoint.png'
-import "../styles/courses.css"
+import powerpoint from "../../assets/powerpoint.png"
+import word from "../../assets/word.png"
+import pdf from "../../assets/pdf.png"
+import "../../styles/courses.css"
 import { Link } from 'react-router-dom'
 // import Comment from './comment'
 

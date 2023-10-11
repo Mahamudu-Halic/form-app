@@ -36,6 +36,144 @@
   width: 250px;
 }
 
+.title{
+  color: #ff5e00;
+}
+
+.feedback{
+  position: fixed;
+  top: 10px;
+  right: -200px;
+  background-color: #0e400e;
+  border: none;
+  transition: 0.3s ease-in-out;
+  text-transform: capitalize;
+  cursor: default;
+  width: fit-content;
+  height: 50px;
+  box-shadow: 0 5px 3px black;
+  width: 200px;
+  z-index: 10;
+}
+
+button.activate{
+  right: 0;
+}
+
+
+.chatbot{
+  
+  /* z-index: 10; */
+}
+
+.chatbot-nav{
+  background-color: blue;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-nav button{
+  border: solid 1px #ed1c1c;
+  background-color: #ed1c1c;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.bot-icon{
+  padding: 5px 10px;
+  background-color: #d16f1a;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 10;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+}
+
+.chatbot i{
+  font-size: 30px;
+
+}
+
+.bot-chat{
+  background-color: white;
+  overflow: hidden;
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  /* padding: 10px 0; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  width: 300px;
+  height: 80%;
+  display: none;
+  z-index: 150;
+}
+
+.show-bot-chat{
+  display: flex;
+}
+
+.bot-messages{
+  color: #000;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bot-messages p{
+  background-color: gray;
+  max-width: 200px;
+  height: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 10px;
+  color: white;
+}
+
+.bot-chat .user{
+  margin-left: auto;
+}
+
+.bot-user-input{
+  padding: 0 10px 10px;
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+
+}
+
+.bot-user-input button{
+  border: none;
+}
+
+.bot-user-input button i{
+  font-size: 20px;
+  
+}
+
+.bot-user-input input{
+  width: 100%;
+  border: none;
+  background-color: #1f1e1e;
+  border-radius: 5px;
+  padding: 10px;
+  outline-color: blue;
+  color: white;
+}
+
+.bot-user-input input::placeholder{
+  color: #aca6a6;
+}
+
 @media screen and (max-width: 700px) {
   .routes{
     border: none;

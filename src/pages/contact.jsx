@@ -19,8 +19,6 @@ const Contact = () => {
             .then((result) => {
                 setSending(false)
                 setSent(true)
-                console.log(result.text);
-                console.log("message sent")
             })
             .then(() => {
                 setTimeout(() => {

@@ -8,7 +8,7 @@
 
 .contact-us{
     position: relative;
-    background: url("../images/contact-us.jpg");
+    background: url("../assets/contact-us.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -150,7 +150,7 @@ input[type="checkbox"]{
     margin-right: 10px;
 }
 
-form button{
+.contact form button{
     width: fit-content;
     padding: 15px;
     border: solid 1px #ae591b;
@@ -162,7 +162,7 @@ form button{
     font-size: 17px;
 }
 
-form button:hover{
+.contact form button:hover{
     filter: brightness(120%);
 }
 

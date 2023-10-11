@@ -53,7 +53,7 @@ const SideBar = () => {
             <div className={`nav ${active && "active"}`}>
                 <div className="brand">
                     <NavLink to="/">
-                        <h1>ShareSync</h1>
+                        <h1><span className="title">ShareSync</span></h1>
                     </NavLink>
                 </div>
                 <div className="close" onClick={handleActive}>

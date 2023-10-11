@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Context } from "./context.provider";
+import { Context } from "../context.provider";
 import { Link } from "react-router-dom";
 
 const CourseList = ({listIndex}) => {

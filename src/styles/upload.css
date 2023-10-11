@@ -10,7 +10,7 @@
 
 .upload-home{
     position: relative;
-    background: url("../images/background.jpg") center no-repeat;
+    background: url("../assets/background.jpg") center no-repeat;
     background-size: cover;
     height: 60vh;
     display: flex;
@@ -77,21 +77,6 @@
 
 .upload li:last-child{
     padding: 0;
-}
-
-.feedback{
-    position: fixed;
-    bottom: 0;
-    right: -200px;
-    background-color: #0e400e;
-    border: none;
-    transition: 0.3s ease-in-out;
-    text-transform: capitalize;
-    cursor: default;
-}
-
-button.activate{
-    right: 0;
 }
 
 .select-course{
