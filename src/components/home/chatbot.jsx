@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useRef } from "react";
 import { useState } from "react";
+import {LuSendHorizonal} from "react-icons/lu"
 
 const ChatBot = () => {
     const [active, setActive] = useState(false)
@@ -84,7 +85,10 @@ const ChatBot = () => {
                 </div>
                 <form className="bot-user-input" onSubmit={e => updateBotMessages(e, "user")}>
                     <input type="text" placeholder="Type here" required/>
-                    <button><i className="bi bi-send"></i></button>
+                    <button>
+                        {/* <i className="bi bi-send"></i> */}
+                        <LuSendHorizonal color="#1F1E1E" size={27} />
+                    </button>
                 </form>
             </div>
             <div className="bot-icon" onClick={toogleChatBot}>

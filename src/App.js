@@ -10,6 +10,7 @@ import {
 } from "@clerk/clerk-react";
 import ContextProvider from "./components/context.provider";
 import HomePage from "./pages/home";
+
 const App = () => {
   
   if (!process.env.REACT_APP_CLERK_PUBLISHABLE_KEY) {

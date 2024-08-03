@@ -104,18 +104,22 @@
     }
 
     .hamburger{
-        display: block;
+        display: flex;
+        justify-content: space-between;
         color: #fff;
         background-color: #372e2e;
         border: solid 1px #372e2e;
         padding: 10px;
-        border-radius: 10px;
-        width: fit-content;
+        /* border-radius: 10px; */
+        width: 100%;
         position: fixed;
-        z-index: 100;
-        cursor: pointer;
-        right: 20px;
-        top: 60px;
+        z-index: 1000;
+        right: 0px;
+        top: 0px;
+    }
+
+    .hamburger button{
+        width: fit-content;
     }
 
     .close{

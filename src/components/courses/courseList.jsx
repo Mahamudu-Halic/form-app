@@ -4,12 +4,16 @@ import { Link } from "react-router-dom";
 
 const CourseList = ({listIndex}) => {
     const {courseList} = useContext(Context)
-    return ( 
+    const array = [
+        "computer Science", "biology", "chemistry"
+        ]
+    return (
+        
         <>
             {
-                courseList[listIndex].map(list => {
+                courseList[listIndex].map(item => {
                 return(
-                    <Link to={list} key={list}>{list}</Link>
+                    <Link to={item} key={item}>{item}</Link>
                 )
             })
             }
@@ -18,3 +22,5 @@ const CourseList = ({listIndex}) => {
 }
  
 export default CourseList;
+
+

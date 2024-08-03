@@ -8,6 +8,14 @@ import { useContext } from "react";
 import { Context } from "../components/context.provider";
 import { SideBar, CourseMaterials, DownloadFile } from "../components";
 import Quiz from "./quiz";
+
+import Kommunicate from "@kommunicate/kommunicate-chatbot-plugin";
+
+Kommunicate.init("3ea2957efacafc9bc052c45073a87eb4e", {
+    automaticChatOpenOnNavigation: true,
+    popupWidget: true
+});
+
 const HomePage = () => {
   const { theme, isLight } = useContext(Context);
   return (
@@ -27,7 +35,7 @@ const HomePage = () => {
           <Route path="/upload" element={<Upload />} />
           <Route path="/community" element={<Chat />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/quiz" element={<Quiz />} />
+          {/* <Route path="/quiz" element={<Quiz />} /> */}
           <Route path="/courses/:param" element={<CourseMaterials />} />
           <Route
             path="/courses/:param/:year/:route"
