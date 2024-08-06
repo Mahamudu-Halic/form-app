@@ -35,6 +35,9 @@ code {
   border-radius: 10px;
 }
 
+.toastContainer{
+  z-index: 20000000;
+}
 
 
 /* Handle on hover */
