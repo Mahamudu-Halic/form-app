@@ -31,11 +31,11 @@ const SideBar = () => {
       title: "community",
       link: "community",
     },
-    {
-      icon: "bi bi-book",
-      title: "quiz",
-      link: "quiz",
-    },
+    // {
+    //   icon: "bi bi-book",
+    //   title: "quiz",
+    //   link: "quiz",
+    // },
     {
       icon: "bi bi-headset",
       title: "contact",
