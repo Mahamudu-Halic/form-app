@@ -1,11 +1,11 @@
 /* -------------OVERVIEW------------- */
-.overview{
+.overview {
   display: flex;
   flex-direction: column;
   gap: 100px;
 }
 
-.overlay{
+.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -15,8 +15,7 @@
   z-index: 3;
 }
 
-
-.welcome{
+.welcome {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,16 +30,16 @@
   text-align: center;
 }
 
-.welcome-msg{
+.welcome-msg {
   z-index: 5;
 }
 
-.welcome-msg h1{
+.welcome-msg h1 {
   font-size: 90px;
   color: #fff;
 }
 
-.welcome-msg p{
+.welcome-msg p {
   font-size: 15px;
   color: #e2d3d3;
   letter-spacing: 2px;
@@ -48,40 +47,40 @@
   width: 100%;
 }
 
-.welcome-image{
+.welcome-image {
   width: 100%;
 }
 
-img{
+img {
   width: 100%;
 }
 
-.overview h2{
+.overview h2 {
   font-size: 50px;
 }
 
 /* ----about us----- */
-.about-us{
+.about-us {
   padding: 0 20px;
 }
 
-.about-title{
+.about-title {
   text-align: center;
 }
 
-.about-msg p{
+.about-msg p {
   letter-spacing: 2px;
   line-height: 25px;
   margin-bottom: 50px;
 }
 
-.col{
+.col {
   display: flex;
   flex-direction: column;
   gap: 50px;
 }
 
-.col .row{
+.col .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -91,34 +90,34 @@ img{
   gap: 40px;
 }
 
-.content{
+.content {
   /* width: 50%; */
 }
 
-.content h3{
+.content h3 {
   font-size: 40px;
 }
 
-.content p{
+.content p {
   width: 300px;
   line-height: 30px;
   letter-spacing: 2px;
 }
 
-.image{
+.image {
   width: 50%;
 }
 
 /* ----services------- */
-.services{
+.services {
   text-align: center;
   padding: 0 20px;
 }
 
-.services h2{
+.services h2 {
   margin-bottom: 30px;
 }
-.cards{
+.cards {
   display: flex;
   justify-content: space-between;
   /* width: 80%; */
@@ -126,7 +125,7 @@ img{
   gap: 20px;
 }
 
-.card{
+.card {
   background: linear-gradient(#e0832cc9, #ff7b00);
   padding: 20px;
   border-radius: 5px;
@@ -142,59 +141,57 @@ img{
   color: #fff;
 }
 
-.card i{
+.card i {
   font-size: 30px;
 }
 
-.card p{
+.card p {
   font-size: 18px;
   font-weight: bold;
 }
 
-.card:hover{
+.card:hover {
   filter: brightness(120%);
 }
 
 @media screen and (max-width: 700px) {
-  .cards{
-      gap: 20px;
-      justify-content: center;
+  .cards {
+    gap: 20px;
+    justify-content: center;
   }
 
-  .card{
-      width: 100%;
+  .card {
+    width: 100%;
   }
-  .content p{
-      width: 100%;
+  .content p {
+    width: 100%;
   }
-  .image{
-      width: 100%;
-  }
-
-  .reverse{
-      flex-direction: column-reverse;
+  .image {
+    width: 100%;
   }
 
-  .welcome-msg h1{
+  .reverse {
+    flex-direction: column-reverse;
+  }
+
+  .welcome-msg h1 {
     font-size: 50px;
     color: #fff;
   }
 
-  .welcome-msg p{
+  .welcome-msg p {
     font-size: 13px;
   }
-  
-  .content h3{
+
+  .content h3 {
     font-size: 25px;
   }
 
-  .overview h2{
+  .overview h2 {
     font-size: 35px;
   }
 
-  .about-title{
+  .about-title {
     text-align: left;
   }
-  
 }
-

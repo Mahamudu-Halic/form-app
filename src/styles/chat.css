@@ -1,315 +1,312 @@
-
-.chat{
-    /* padding: 0 20px; */
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    height: 100vh;
+.chat {
+  /* padding: 0 20px; */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
 }
-.chat-community{
-    display: flex;
-    border-radius: 10px;
-    overflow: hidden;
-    /* position: fixed; */
-    height: 100%;
-}
-
-.chat-dashbord{
-    padding: 20px 10px 20px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-    z-index: 11;
+.chat-community {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  /* position: fixed; */
+  height: 100%;
+  z-index: 10000000;
 }
 
-.create-topic{
-    position: absolute;
-    background-color: #000000bb;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 0;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 30px;
-    display: none;
-    gap: 10px;
-    z-index: 50;
+.chat-dashbord {
+  padding: 20px 10px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 11;
 }
 
-.create-topic form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.create-topic {
+  position: absolute;
+  background-color: #000000bb;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  display: none;
+  gap: 10px;
+  z-index: 50;
 }
 
-.create-topic form input{
-    background-color: #fff;
-    color: #121212;
+.create-topic form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.create-topic form button{
-
-    text-transform: capitalize;
-    font-weight: normal;
-    letter-spacing: 2px;
+.create-topic form input {
+  background-color: #fff;
+  color: #121212;
 }
 
-div.create{
-    display: flex;
+.create-topic form button {
+  text-transform: capitalize;
+  font-weight: normal;
+  letter-spacing: 2px;
 }
 
-.chat-dashbord .create-topic input{
-    padding: 15px;
-    border-color: grey;
-    
+div.create {
+  display: flex;
 }
 
-.chat-navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.chat-dashbord .create-topic input {
+  padding: 15px;
+  border-color: grey;
 }
 
-.chat-navbar button, .create-topic button{
-    background: none;
-    border: solid 1px grey;
-    padding: 10px;
-    border-radius: 5px;
+.chat-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.chat-navbar button:hover, .create-topic button:hover{
-    background: grey;
+.chat-navbar button,
+.create-topic button {
+  background: none;
+  border: solid 1px grey;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.topics{
-    border-top: solid 1px gray;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
+.chat-navbar button:hover,
+.create-topic button:hover {
+  background: grey;
 }
 
-button{
-    cursor: pointer;
+.topics {
+  border-top: solid 1px gray;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.topics button{
-    border: none;
-    border-bottom: solid 1px white;
-    background: none;
-    text-align: left;
-    padding: 15px 10px;
-    transition: 0.3s ease;
-    border-radius: 5px;
+button {
+  cursor: pointer;
 }
 
-.topics button:hover{
-    background: #2864E6;
+.topics button {
+  border: none;
+  border-bottom: solid 1px white;
+  background: none;
+  text-align: left;
+  padding: 15px 10px;
+  transition: 0.3s ease;
+  border-radius: 5px;
 }
 
-.create-topic-btn button{
-    padding: 10px;
-    border-radius: 5px;
-    border: solid 1px;
-    background-color: #2864E6;
-    color: #fff;
-    text-transform: capitalize;
-    width: 100%;
+.topics button:hover {
+  background: #2864e6;
 }
 
-.chat-dashbord input{
-    padding: 10px;
-    border: none;
-    background-color: #191919;
-    border-radius: 5px;
-    outline-color: #2864E6;
-    color: #fff;
+.create-topic-btn button {
+  padding: 10px;
+  border-radius: 5px;
+  border: solid 1px;
+  background-color: #2864e6;
+  color: #fff;
+  text-transform: capitalize;
+  width: 100%;
 }
 
-.chatbox{
-    padding: 0 20px 10px;
-    display: flex;
-    flex-direction: column;
-    /* gap: 10px; */
-    width: 100%;
-    position: relative;
+.chat-dashbord input {
+  padding: 10px;
+  border: none;
+  background-color: #191919;
+  border-radius: 5px;
+  outline-color: #2864e6;
+  color: #fff;
 }
 
-.chat-messages{
-    overflow: auto;
-    padding: 17px 10px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    /* height: 90vh; */
-    /* min-height: 60vh; */
-    height: 100vh;
-
+.chatbox {
+  padding: 0 20px 10px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  width: 100%;
+  position: relative;
 }
 
-.message{
-    min-width: 200px;
-    width: fit-content;
-    padding: 10px;
-    border-radius: 5px;
-    position: relative;
-    
+.chat-messages {
+  overflow: auto;
+  padding: 17px 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* height: 90vh; */
+  /* min-height: 60vh; */
+  height: 100vh;
 }
 
-
-
-.entry-field{
-    border-top: solid 1px #423f3f;
-    padding-top: 10px;
-    margin-top: auto;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    z-index: 10;
+.message {
+  min-width: 200px;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
 }
 
-.entry-field input{
-    width: 100%;
-    padding: 15px 10px;
-    outline-color: blue;
-    border: none;
-    border-radius: 5px;
-    background-color: #1d1d1d;
-    color: #fff;
-    font-size: 16px;
+.entry-field {
+  border-top: solid 1px #423f3f;
+  padding-top: 10px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
 }
 
-.entry-field button{
-    border-radius: 10px;
-    padding: 15px;
-    cursor: pointer;
-    background: #ae5312;
-    border: solid 1px;
-    color: #c0bdbd;
+.entry-field input {
+  width: 100%;
+  padding: 15px 10px;
+  outline-color: blue;
+  border: none;
+  border-radius: 5px;
+  background-color: #1d1d1d;
+  color: #fff;
+  font-size: 16px;
 }
 
-.message .name{
-    font-size: 12px;
+.entry-field button {
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  background: #ae5312;
+  border: solid 1px;
+  color: #c0bdbd;
 }
 
-.message .message-txt{
-    font-size: 14px;
+.message .name {
+  font-size: 12px;
 }
 
-.time{
-    font-size: 10px;
-    text-align: right;
-    margin-top: 5px;
+.message .message-txt {
+  font-size: 14px;
 }
 
-.arrow{
-    position: fixed;
-    top: 45%;
-    left: 5px;
-    z-index: 31;
-    display: none;
+.time {
+  font-size: 10px;
+  text-align: right;
+  margin-top: 5px;
 }
 
-.arrow button{
-    color: #fff;
-    background-color: #ad4906;
-    padding: 5px;
-    height: 50px;
-    border: solid 1px;
-    border-radius: 5px;
+.arrow {
+  position: fixed;
+  top: 45%;
+  left: 5px;
+  z-index: 31;
+  display: none;
 }
 
-.chat-community .overlay{
-    display: none;
+.arrow button {
+  color: #fff;
+  background-color: #ad4906;
+  padding: 5px;
+  height: 50px;
+  border: solid 1px;
+  border-radius: 5px;
 }
 
-.user-chat{
-    display: flex;
-    gap: 10px;
-    border-left: solid 1px gray;
-    padding-left: 10px;
-    position: relative;
+.chat-community .overlay {
+  display: none;
 }
 
-.user-chat:last-child{
-    /* margin-bottom: 20px; */
+.user-chat {
+  display: flex;
+  gap: 10px;
+  border-left: solid 1px gray;
+  padding-left: 10px;
+  position: relative;
 }
 
-.user-chat::before{
-    content: "";
-    position: absolute;
-    top: -16px;
-    left: -9px;
-    height: 15px;
-    width: 15px;
-    background-color: #5f5959;
-    border: solid 1px #5f5959;
-    border-radius: 50%;
-}
-.user-chat:last-child::after{
-    content: "";
-    position: absolute;
-    bottom: -16px;
-    left: -9px;
-    height: 15px;
-    width: 15px;
-    background: none;
-    border-radius: 50%;
-    border: solid 1px #5f5959;
+.user-chat:last-child {
+  /* margin-bottom: 20px; */
 }
 
-.user-profile{
-    width: 40px;
-    overflow: hidden;
+.user-chat::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: -9px;
+  height: 15px;
+  width: 15px;
+  background-color: #5f5959;
+  border: solid 1px #5f5959;
+  border-radius: 50%;
+}
+.user-chat:last-child::after {
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: -9px;
+  height: 15px;
+  width: 15px;
+  background: none;
+  border-radius: 50%;
+  border: solid 1px #5f5959;
+}
+
+.user-profile {
+  width: 40px;
+  overflow: hidden;
 }
 
 .user-chat img {
-    width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
-.topic-heading{
-    border-bottom: solid 1px #423f3f;
-    padding: 10px 0;
+.topic-heading {
+  border-bottom: solid 1px #423f3f;
+  padding: 10px 0;
 }
 
 @media screen and (max-width: 840px) {
-    .chat{
-        padding: 0;
-    }
+  .chat {
+    padding: 0;
+  }
 
-    .chat-messages{
-        /* height: 80vh; */
-    }
+  .chat-messages {
+    /* height: 80vh; */
+  }
 
-    .chat-community{
-        border-radius: 0;
-        position: relative;
-    }
-    
-    .chat-community .overlay{
-        display: block;
-        transition: 0.3s ease-in-out;
-        z-index: 20;
-    }
-    .arrow{
-        display: block;
-    }
+  .chat-community {
+    border-radius: 0;
+    position: relative;
+  }
 
-    .chat-dashbord{
-        border: none;
-        position: fixed;
-        height: 100%;
-        left: -300px;
-        transition: 0.3s ease-in-out;
-        z-index: 30;
-    }
+  .chat-community .overlay {
+    display: block;
+    transition: 0.3s ease-in-out;
+    /* z-index: 10000000; */
+  }
+  .arrow {
+    display: block;
+    /* z-index: 10000001; */
+  }
 
-    .chat-community div.show-dashboard{
-        left: 0;
-    }
+  .chat-dashbord {
+    border: none;
+    position: fixed;
+    height: 100%;
+    left: -300px;
+    transition: 0.3s ease-in-out;
+    /* z-index: 10000000; */
+  }
+
+  .chat-community div.show-dashboard {
+    left: 0;
+  }
 }

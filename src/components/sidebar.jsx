@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/sidebar.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { UserButton } from "@clerk/clerk-react";
 import Theme from "./theme";
 const SideBar = () => {
@@ -46,8 +46,10 @@ const SideBar = () => {
     <div className={`sidebar ${active && "active"}`}>
       <div className="overlay" onClick={handleActive}></div>
       <div className="hamburger">
-        <h1 className="title">ShareSync</h1>
-        <button  onClick={handleActive}>
+        <Link to={"/"} className="title">
+          LearnHub
+        </Link>
+        <button onClick={handleActive}>
           <i className="fa-solid fa-bars-staggered"></i>
         </button>
       </div>
@@ -55,7 +57,7 @@ const SideBar = () => {
         <div className="brand">
           <NavLink to="/">
             <h1>
-              <span className="title">ShareSync</span>
+              <span className="title">LearnHub</span>
             </h1>
           </NavLink>
         </div>

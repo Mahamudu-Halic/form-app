@@ -23,20 +23,20 @@ const Upload = () => {
   // handleChange
   const handleChange = (e) => {
     setSuccess(false);
-    setFiles([])
+    setFiles([]);
     try {
       if (e.target.files) {
         // fileName = e.target.files[0].name
         let newFiles = [...e.target.files];
+        console.log(newFiles);
         newFiles.forEach((item) => {
           if (
-            item?.name.includes(".doc") ||
-            item?.name.includes(".ppt") ||
-            item?.name.includes(".pdf")
+            item?.type.includes(".document") ||
+            item?.type.includes("powerpoint") ||
+            item?.type.includes("pdf")
           ) {
-            setFiles(prev => [...prev, item])
-
-        }else{
+            setFiles((prev) => [...prev, item]);
+          } else {
             toast.error("only .doc, .docx, .ppt. pdf file extensions required");
             handleReset();
             return;
@@ -90,16 +90,16 @@ const Upload = () => {
         setUploading(true);
         const filteredFiles = files.filter(
           (item) =>
-            !item?.name.includes(".doc") ||
-            !item?.name.includes(".ppt") ||
-            !item?.name.includes(".pdf")
+            item?.type.includes(".document") ||
+            item?.name.includes(".ppt") ||
+            item?.name.includes(".pdf")
         );
 
         return handleUpload("files", filteredFiles);
 
         // return handleUpload('videos')
-      }else{
-        toast.error("fill in the required fields")
+      } else {
+        toast.error("fill in the required fields");
       }
     } catch (err) {
       console.log("upload", err);
@@ -144,6 +144,7 @@ const Upload = () => {
             <input
               type="file"
               multiple
+              accept=".doc, .docx,.ppt, .pptx,.txt,.pdf"
               onChange={handleChange}
               id="file"
               required
